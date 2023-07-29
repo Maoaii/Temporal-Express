@@ -9,7 +9,12 @@ func _ready() -> void:
 
 func handle_body_entered(body) -> void:
 	if body.name == "Player":
-		health.full_heal()
+		var player: Player = body
+		if player.has_oil:
+			health.full_heal()
+			
+			player.used_oil()
+		
 
 
 func _on_deterioration_component_timeout():

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://n0nqr2ima3b7"]
+
+[ext_resource type="Script" path="res://scripts/oil.gd" id="1_j6o7i"]
+[ext_resource type="Texture2D" uid="uid://eqfrshpwk8fc" path="res://assets/oil.png" id="1_kacgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsx78"]
+size = Vector2(26, 36)
+
+[node name="Oil" type="Area2D"]
+script = ExtResource("1_j6o7i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kacgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hsx78")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

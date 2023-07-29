@@ -10,3 +10,5 @@ res://scenes/interactive_area.tscn
 res://scripts/interactive_area.gd
 res://scenes/deterioration_component.tscn
 res://scripts/deterioration_component.gd
+res://scenes/oil.tscn
+res://scripts/oil.gd
