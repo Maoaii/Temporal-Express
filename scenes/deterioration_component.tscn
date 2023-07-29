@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5am3v31w4t2v"]
+
+[ext_resource type="Script" path="res://scripts/deterioration_component.gd" id="1_gcjnv"]
+
+[node name="DeteriorationComponent" type="Timer"]
+script = ExtResource("1_gcjnv")

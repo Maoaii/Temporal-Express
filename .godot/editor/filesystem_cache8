@@ -1,6 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690663390
-icon.svg::CompressedTexture2D::4145099956830967293::1690660650::1690660654::1::::<><>::
-::res://scenes/::1690660822
-player.tscn::PackedScene::7680247445627932777::1690660822::0::1::::<><>::
-world.tscn::PackedScene::6945597352578815278::1690660681::0::1::::<><>::
+::res://::1690667558
+::res://assets/::1690667558
+gear.png::CompressedTexture2D::3217893467419374211::1690667546::1690667552::1::::<><>::
+icon.svg::CompressedTexture2D::4145099956830967293::1690660650::1690667558::1::::<><>::
+::res://scenes/::1690667558
+gear.tscn::PackedScene::9138337829315219778::1690667427::0::1::::<><>::
+player.tscn::PackedScene::7680247445627932777::1690667558::0::1::::<><>::res://scripts/player.gd<>uid://b0b6gqotwg5av::::res://assets/icon.svg
+world.tscn::PackedScene::6945597352578815278::1690667194::0::1::::<><>::uid://dhoms2wesdns0::::res://scenes/player.tscn<>res://scripts/world.gd
+::res://scripts/::1690667396
+player.gd::GDScript::-1::1690667194::0::1::::<>CharacterBody2D<>::
+world.gd::GDScript::-1::1690667396::0::1::::<>Node2D<>::

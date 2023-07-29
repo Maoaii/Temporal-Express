@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3gxda17jlacw"]
+
+[ext_resource type="Texture2D" uid="uid://bl31h878p7ljv" path="res://assets/gear.png" id="1_3pot3"]
+[ext_resource type="Script" path="res://scripts/gear.gd" id="1_6phrw"]
+[ext_resource type="PackedScene" uid="uid://bxa3115ih8rg1" path="res://scenes/health.tscn" id="2_2sx7v"]
+[ext_resource type="PackedScene" uid="uid://dxm1u6utisu5h" path="res://scenes/interactive_area.tscn" id="4_4t8xj"]
+[ext_resource type="PackedScene" uid="uid://b5am3v31w4t2v" path="res://scenes/deterioration_component.tscn" id="5_ck8et"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8a0px"]
+radius = 65.0308
+
+[node name="Gear" type="StaticBody2D" node_paths=PackedStringArray("interactive_area", "health")]
+script = ExtResource("1_6phrw")
+interactive_area = NodePath("InteractiveArea")
+health = NodePath("Health")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3pot3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8a0px")
+
+[node name="Health" parent="." instance=ExtResource("2_2sx7v")]
+position = Vector2(0, -98)
+show_percentage = true
+
+[node name="InteractiveArea" parent="." instance=ExtResource("4_4t8xj")]
+radius = 80.0
+
+[node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
+time_to_tick = 1.0
+
+[connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
