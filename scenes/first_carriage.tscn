@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0w83vfm8xf3e"]
+[gd_scene load_steps=8 format=3 uid="uid://c0w83vfm8xf3e"]
 
 [ext_resource type="PackedScene" uid="uid://bjwml1ltsqsll" path="res://assets/train/first_carriage.ase" id="1_v8ybw"]
 
@@ -17,27 +17,36 @@ size = Vector2(14, 94)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d43s"]
 size = Vector2(178, 11)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7l7r"]
+size = Vector2(198, 96)
+
 [node name="First Carriage" type="StaticBody2D"]
 
-[node name="first_carriage" parent="." instance=ExtResource("1_v8ybw")]
-animation = &"Closed"
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_v8ybw")]
+animation = &"Opened"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="BottomLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-146.5, 46)
 shape = SubResource("RectangleShape2D_g48r1")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="TopLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-146.5, -17.5)
 shape = SubResource("RectangleShape2D_mad2p")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+[node name="Bottom" type="CollisionShape2D" parent="."]
 position = Vector2(-58.5, 65)
 shape = SubResource("RectangleShape2D_mogwi")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+[node name="Right" type="CollisionShape2D" parent="."]
 position = Vector2(27, 16)
 shape = SubResource("RectangleShape2D_yd5c4")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+[node name="Top" type="CollisionShape2D" parent="."]
 position = Vector2(-55, -30.5)
 shape = SubResource("RectangleShape2D_7d43s")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="PlayerDetectionCollider" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(-65, 16)
+shape = SubResource("RectangleShape2D_b7l7r")

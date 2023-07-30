@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c68app6pgbibb"]
+[gd_scene load_steps=9 format=3 uid="uid://c68app6pgbibb"]
 
+[ext_resource type="Script" path="res://scripts/last_carriage.gd" id="1_fp24v"]
 [ext_resource type="PackedScene" uid="uid://m2rl8o5ecdrc" path="res://assets/train/last_carriage.ase" id="1_lwwav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tramc"]
@@ -17,27 +18,39 @@ size = Vector2(22, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrp1d"]
 size = Vector2(304, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kc7i"]
+size = Vector2(308, 96)
+
 [node name="Last Carriage" type="StaticBody2D"]
+script = ExtResource("1_fp24v")
 
-[node name="last_carriage" parent="." instance=ExtResource("1_lwwav")]
-animation = &"Closed"
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_lwwav")]
+animation = &"Opened"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="BottomRight" type="CollisionShape2D" parent="."]
 position = Vector2(149, 43.5)
 shape = SubResource("RectangleShape2D_tramc")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="Bottom" type="CollisionShape2D" parent="."]
 position = Vector2(0, 61)
 shape = SubResource("RectangleShape2D_5vpfh")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+[node name="Left" type="CollisionShape2D" parent="."]
 position = Vector2(-138, 13.5)
 shape = SubResource("RectangleShape2D_2vts7")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+[node name="TopRight" type="CollisionShape2D" parent="."]
 position = Vector2(149, -15.5)
 shape = SubResource("RectangleShape2D_xpiiw")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+[node name="Top" type="CollisionShape2D" parent="."]
 position = Vector2(8, -34.5)
 shape = SubResource("RectangleShape2D_yrp1d")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="PlayerDetectionCollider" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(10, 16)
+shape = SubResource("RectangleShape2D_0kc7i")
+
+[node name="Node2D" type="Node2D" parent="."]

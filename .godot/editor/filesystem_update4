@@ -2,3 +2,6 @@ res://scenes/first_carriage.tscn
 res://scenes/last_carriage.tscn
 res://scenes/carriage.tscn
 res://scenes/world.tscn
+res://scenes/train.tscn
+res://scripts/train.gd
+res://scripts/last_carriage.gd

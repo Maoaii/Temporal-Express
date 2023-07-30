@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://btl4d6fb7d1j"]
+[gd_scene load_steps=8 format=3 uid="uid://btl4d6fb7d1j"]
 
 [ext_resource type="PackedScene" uid="uid://sc7sccldgiv5" path="res://assets/train/middle_carriage.ase" id="1_rpv2w"]
 
@@ -17,31 +17,40 @@ size = Vector2(28, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd3a"]
 size = Vector2(28, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8d8"]
+size = Vector2(328, 96)
+
 [node name="Carriage" type="StaticBody2D"]
 
-[node name="middle_carriage" parent="." instance=ExtResource("1_rpv2w")]
-animation = &"Closed"
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_rpv2w")]
+animation = &"Opened"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Bottom" type="CollisionShape2D" parent="."]
 position = Vector2(0, 57.625)
 shape = SubResource("RectangleShape2D_v5iii")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="Top" type="CollisionShape2D" parent="."]
 position = Vector2(0, -31.75)
 shape = SubResource("RectangleShape2D_v5iii")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+[node name="BottomLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-146, 46)
 shape = SubResource("RectangleShape2D_scpfp")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+[node name="TopRight" type="CollisionShape2D" parent="."]
 position = Vector2(146, -21.0938)
 shape = SubResource("RectangleShape2D_7tkh7")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+[node name="BottomRight" type="CollisionShape2D" parent="."]
 position = Vector2(146, 46)
 shape = SubResource("RectangleShape2D_rbr13")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+[node name="TopLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-146, -18)
 shape = SubResource("RectangleShape2D_0xd3a")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="PlayerDetectionCollider" type="CollisionShape2D" parent="PlayerDetection"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_5b8d8")
