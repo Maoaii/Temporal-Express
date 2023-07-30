@@ -4,3 +4,5 @@ res://scenes/gear.tscn
 res://scenes/health.tscn
 res://scenes/carriage.tscn
 res://scenes/oil.tscn
+res://scenes/background.tscn
+res://scripts/background.gd

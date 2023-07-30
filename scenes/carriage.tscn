@@ -1,15 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://btl4d6fb7d1j"]
+[gd_scene load_steps=7 format=3 uid="uid://btl4d6fb7d1j"]
 
 [ext_resource type="Texture2D" uid="uid://lvaauh5lgqfl" path="res://assets/train/empty_open_carriage.png" id="1_kv44h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5iii"]
-size = Vector2(278, 13)
+size = Vector2(278, 13.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scpfp"]
-size = Vector2(27, 48.5)
+size = Vector2(28, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tkh7"]
-size = Vector2(28, 22.5)
+size = Vector2(28, 34.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbr13"]
+size = Vector2(28, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd3a"]
+size = Vector2(28, 28)
 
 [node name="Carriage" type="StaticBody2D"]
 
@@ -22,21 +28,21 @@ position = Vector2(0, 57.5)
 shape = SubResource("RectangleShape2D_v5iii")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -32)
+position = Vector2(0, -31.75)
 shape = SubResource("RectangleShape2D_v5iii")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-147.5, 40)
+position = Vector2(-147, 46)
 shape = SubResource("RectangleShape2D_scpfp")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(145, 40)
-shape = SubResource("RectangleShape2D_scpfp")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-147, -27)
-shape = SubResource("RectangleShape2D_7tkh7")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
-position = Vector2(145, -27.25)
+position = Vector2(145, -21.1875)
 shape = SubResource("RectangleShape2D_7tkh7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(145, 46)
+shape = SubResource("RectangleShape2D_rbr13")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(-147, -18)
+shape = SubResource("RectangleShape2D_0xd3a")

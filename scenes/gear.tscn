@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b5am3v31w4t2v" path="res://scenes/deterioration_component.tscn" id="5_ck8et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a0px"]
-radius = 18.4391
+radius = 15.0333
 
 [node name="Gear" type="StaticBody2D" node_paths=PackedStringArray("health", "deterioration")]
 script = ExtResource("1_6phrw")

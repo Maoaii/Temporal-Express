@@ -8,7 +8,7 @@ size = Vector2(12, 16)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_lc1hh")
-MAX_SPEED = 400.0
+MAX_SPEED = 300.0
 ACCELERATION = 20.0
 FRICTION = 10.0
 CLICK_AND_MOVE_DEADZONE = 10.0
@@ -20,3 +20,6 @@ texture = ExtResource("2_7ahjk")
 shape = SubResource("RectangleShape2D_wwhfm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+drag_vertical_enabled = true
