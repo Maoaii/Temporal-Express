@@ -9,10 +9,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a0px"]
 radius = 65.0308
 
-[node name="Gear" type="StaticBody2D" node_paths=PackedStringArray("interactive_area", "health")]
+[node name="Gear" type="StaticBody2D" node_paths=PackedStringArray("health", "deterioration")]
 script = ExtResource("1_6phrw")
-interactive_area = NodePath("InteractiveArea")
 health = NodePath("Health")
+deterioration = NodePath("DeteriorationComponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3pot3")
@@ -24,10 +24,12 @@ shape = SubResource("CircleShape2D_8a0px")
 position = Vector2(0, -98)
 show_percentage = true
 
-[node name="InteractiveArea" parent="." instance=ExtResource("4_4t8xj")]
-radius = 80.0
-
 [node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
-time_to_tick = 1.0
+time_to_tick = 5.0
 
+[node name="InteractiveArea" parent="." instance=ExtResource("4_4t8xj")]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
+[connection signal="clicked" from="InteractiveArea" to="." method="_on_interactive_area_clicked"]

@@ -14,6 +14,7 @@ extends CharacterBody2D
 
 var has_oil: bool = false
 
+
 func _process(delta: float) -> void:
 	if CLICK_AND_MOVE:
 		handle_click_movement(delta)

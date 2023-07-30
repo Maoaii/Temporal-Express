@@ -1,9 +1,10 @@
-Area2D
+ColorRect
+CanvasLayer
 CollisionShape2D
 Sprite2D
+StaticBody2D
+Area2D
 Node2D
 Timer
 ProgressBar
-CanvasLayer
-StaticBody2D
 CharacterBody2D

@@ -1,3 +1,4 @@
+class_name Deterioration
 extends Timer
 
 @export var time_to_tick: float

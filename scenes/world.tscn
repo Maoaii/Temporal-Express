@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c57q8drwfpyag"]
+[gd_scene load_steps=6 format=3 uid="uid://c57q8drwfpyag"]
 
 [ext_resource type="PackedScene" uid="uid://dhoms2wesdns0" path="res://scenes/player.tscn" id="1_8n7i0"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_n2h5o"]
 [ext_resource type="PackedScene" uid="uid://d3gxda17jlacw" path="res://scenes/gear.tscn" id="3_xmov2"]
 [ext_resource type="PackedScene" uid="uid://n0nqr2ima3b7" path="res://scenes/oil.tscn" id="4_fo50p"]
+[ext_resource type="PackedScene" uid="uid://byg62u7phovk1" path="res://scenes/coal_supply.tscn" id="5_27keh"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_n2h5o")
@@ -16,3 +17,6 @@ position = Vector2(868, 540)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(316, 684)
+
+[node name="Coal Supply" parent="." instance=ExtResource("5_27keh")]
+position = Vector2(1472, 266)
