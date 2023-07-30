@@ -1,43 +1,43 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0w83vfm8xf3e"]
 
-[ext_resource type="Texture2D" uid="uid://xhouly07ye7s" path="res://assets/train/closed_first_carriage.png" id="1_6j2ws"]
+[ext_resource type="Texture2D" uid="uid://wacsjvlp1f1m" path="res://assets/train/open_first_carriage.png" id="1_2vibj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g48r1"]
-size = Vector2(21, 36)
+size = Vector2(27, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mad2p"]
-size = Vector2(21, 20)
+size = Vector2(27, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mogwi"]
-size = Vector2(301, 20)
+size = Vector2(185, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yd5c4"]
-size = Vector2(20, 83)
+size = Vector2(14, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d43s"]
-size = Vector2(178, 20)
+size = Vector2(178, 11)
 
 [node name="First Carriage" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_6j2ws")
+texture = ExtResource("1_2vibj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-149.5, 46)
+position = Vector2(-146.5, 46)
 shape = SubResource("RectangleShape2D_g48r1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-149.5, -14)
+position = Vector2(-146.5, -17.5)
 shape = SubResource("RectangleShape2D_mad2p")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 69)
+position = Vector2(-58.5, 65)
 shape = SubResource("RectangleShape2D_mogwi")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(37, 17.5)
+position = Vector2(27, 16)
 shape = SubResource("RectangleShape2D_yd5c4")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-55, -26)
+position = Vector2(-55, -30.5)
 shape = SubResource("RectangleShape2D_7d43s")

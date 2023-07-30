@@ -12,26 +12,29 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_n2h5o")
 
+[node name="Last Carriage" parent="." instance=ExtResource("7_5i5is")]
+position = Vector2(160, 135)
+
 [node name="Carriage" parent="." instance=ExtResource("2_xi8e3")]
 position = Vector2(481, 135)
 
 [node name="Carriage2" parent="." instance=ExtResource("2_xi8e3")]
 position = Vector2(801, 135)
 
+[node name="Carriage3" parent="." instance=ExtResource("2_xi8e3")]
+position = Vector2(1121, 135)
+
+[node name="First Carriage" parent="." instance=ExtResource("8_k65r7")]
+position = Vector2(1440, 135)
+
 [node name="Player" parent="." instance=ExtResource("1_8n7i0")]
 position = Vector2(486, 144)
 
 [node name="Gear" parent="." instance=ExtResource("3_xmov2")]
-position = Vector2(802, 124)
+position = Vector2(1381, 124)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
-position = Vector2(411, 171)
+position = Vector2(406, 175)
 
 [node name="Background" parent="." instance=ExtResource("6_hy4g3")]
 background_scroll = Vector2(200, 2.08165e-12)
-
-[node name="Last Carriage" parent="." instance=ExtResource("7_5i5is")]
-position = Vector2(160, 135)
-
-[node name="First Carriage" parent="." instance=ExtResource("8_k65r7")]
-position = Vector2(1120, 135)
