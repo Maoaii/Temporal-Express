@@ -25,11 +25,12 @@ position = Vector2(0, -51)
 show_percentage = true
 
 [node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
-time_to_tick = 5.0
+time_to_tick = 1.0
 
 [node name="InteractiveArea" parent="." instance=ExtResource("4_4t8xj")]
+radius = 32.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
-[connection signal="clicked" from="InteractiveArea" to="." method="_on_interactive_area_clicked"]
+[connection signal="on_interacted" from="InteractiveArea" to="." method="_on_interactive_area_on_interacted"]

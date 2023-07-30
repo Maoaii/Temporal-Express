@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://c68app6pgbibb"]
+
+[ext_resource type="Texture2D" uid="uid://bjo5derrmuoik" path="res://assets/train/closed_last_carriage.png" id="1_l3fs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tramc"]
+size = Vector2(22, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vpfh"]
+size = Vector2(288, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vts7"]
+size = Vector2(6, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpiiw"]
+size = Vector2(22, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrp1d"]
+size = Vector2(304, 20)
+
+[node name="Last Carriage" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l3fs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(149, 43.5)
+shape = SubResource("RectangleShape2D_tramc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 65)
+shape = SubResource("RectangleShape2D_5vpfh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-141, 17.5)
+shape = SubResource("RectangleShape2D_2vts7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(149, -15.5)
+shape = SubResource("RectangleShape2D_xpiiw")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(8, -34)
+shape = SubResource("RectangleShape2D_yrp1d")

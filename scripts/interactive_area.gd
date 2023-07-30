@@ -1,8 +1,9 @@
 class_name InteractiveArea
 extends Area2D
 
-signal clicked(player)
+signal on_interacted(player)
 
+@export var clickable: bool
 @export var radius: float
 
 var player: Player
@@ -12,10 +13,14 @@ func _ready() -> void:
 	$CollisionShape2D.shape.radius = radius
 
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("click") and player and mouse_hover:
-		emit_signal("clicked", player)
-		print("Clicked: " + get_parent().name)
+func _process(_delta: float) -> void:
+	if clickable:
+		if Input.is_action_just_pressed("click") and player and mouse_hover:
+			emit_signal("on_interacted", player)
+	else:
+		if player:
+			emit_signal("on_interacted", player)
+	
 
 
 func _on_body_entered(body):
