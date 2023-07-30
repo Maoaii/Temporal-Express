@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://eqfrshpwk8fc" path="res://assets/oil.png" id="1_kacgo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsx78"]
-size = Vector2(26, 36)
+size = Vector2(8, 16)
 
 [node name="Oil" type="Area2D"]
 script = ExtResource("1_j6o7i")
