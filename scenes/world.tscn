@@ -13,7 +13,7 @@
 script = ExtResource("1_n2h5o")
 
 [node name="Last Carriage" parent="." instance=ExtResource("7_5i5is")]
-position = Vector2(160, 135)
+position = Vector2(161, 135)
 
 [node name="Carriage" parent="." instance=ExtResource("2_xi8e3")]
 position = Vector2(481, 135)

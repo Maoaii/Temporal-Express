@@ -1,15 +1,15 @@
 [gd_scene load_steps=7 format=3 uid="uid://btl4d6fb7d1j"]
 
-[ext_resource type="Texture2D" uid="uid://lvaauh5lgqfl" path="res://assets/train/empty_open_carriage.png" id="1_kv44h"]
+[ext_resource type="PackedScene" uid="uid://sc7sccldgiv5" path="res://assets/train/middle_carriage.ase" id="1_rpv2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5iii"]
-size = Vector2(278, 13.5)
+size = Vector2(278, 13.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_scpfp"]
 size = Vector2(28, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tkh7"]
-size = Vector2(28, 34.375)
+size = Vector2(28, 34.1875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rbr13"]
 size = Vector2(28, 36)
@@ -19,12 +19,11 @@ size = Vector2(28, 28)
 
 [node name="Carriage" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
-texture = ExtResource("1_kv44h")
+[node name="middle_carriage" parent="." instance=ExtResource("1_rpv2w")]
+animation = &"Closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 57.5)
+position = Vector2(0, 57.625)
 shape = SubResource("RectangleShape2D_v5iii")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
@@ -32,17 +31,17 @@ position = Vector2(0, -31.75)
 shape = SubResource("RectangleShape2D_v5iii")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-147, 46)
+position = Vector2(-146, 46)
 shape = SubResource("RectangleShape2D_scpfp")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
-position = Vector2(145, -21.1875)
+position = Vector2(146, -21.0938)
 shape = SubResource("RectangleShape2D_7tkh7")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(145, 46)
+position = Vector2(146, 46)
 shape = SubResource("RectangleShape2D_rbr13")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-147, -18)
+position = Vector2(-146, -18)
 shape = SubResource("RectangleShape2D_0xd3a")

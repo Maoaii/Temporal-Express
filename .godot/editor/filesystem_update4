@@ -1,13 +1,4 @@
-res://scenes/player.tscn
-res://scenes/world.tscn
-res://scenes/gear.tscn
-res://scenes/health.tscn
-res://scenes/carriage.tscn
-res://scenes/oil.tscn
-res://scenes/background.tscn
-res://scripts/background.gd
-res://scripts/interactive_area.gd
-res://scripts/gear.gd
-res://scripts/player.gd
-res://scenes/last_carriage.tscn
 res://scenes/first_carriage.tscn
+res://scenes/last_carriage.tscn
+res://scenes/carriage.tscn
+res://scenes/world.tscn

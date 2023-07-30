@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0w83vfm8xf3e"]
 
-[ext_resource type="Texture2D" uid="uid://wacsjvlp1f1m" path="res://assets/train/open_first_carriage.png" id="1_2vibj"]
+[ext_resource type="PackedScene" uid="uid://bjwml1ltsqsll" path="res://assets/train/first_carriage.ase" id="1_v8ybw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g48r1"]
 size = Vector2(27, 36)
@@ -19,8 +19,8 @@ size = Vector2(178, 11)
 
 [node name="First Carriage" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_2vibj")
+[node name="first_carriage" parent="." instance=ExtResource("1_v8ybw")]
+animation = &"Closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-146.5, 46)
