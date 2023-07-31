@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c68app6pgbibb"]
 
 [ext_resource type="Script" path="res://scripts/last_carriage.gd" id="1_fp24v"]
-[ext_resource type="PackedScene" uid="uid://m2rl8o5ecdrc" path="res://assets/train/last_carriage.ase" id="1_lwwav"]
+[ext_resource type="PackedScene" uid="uid://c35mjih4tgcts" path="res://assets/train/last_carriage.ase" id="1_lwwav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tramc"]
 size = Vector2(22, 31)
