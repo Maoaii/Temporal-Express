@@ -10,7 +10,7 @@ size = Vector2(64, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rufa"]
 size = Vector2(68, 17)
 
-[node name="Coal Supply" type="StaticBody2D"]
+[node name="Coal Supply" type="StaticBody2D" groups=["CoalSupply"]]
 script = ExtResource("1_frxmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -25,9 +25,34 @@ shape = SubResource("RectangleShape2D_cv6uq")
 position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_0rufa")
 
+[node name="OverheatTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="KaboomTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [node name="Label" type="Label" parent="."]
-offset_left = -5.0
+offset_left = -32.0
 offset_top = -37.0
-offset_right = 11.0
+offset_right = -16.0
 offset_bottom = -11.0
 text = "1"
+
+[node name="OverheatLabel" type="Label" parent="."]
+offset_left = 22.0
+offset_top = -37.0
+offset_right = 34.0
+offset_bottom = -11.0
+text = "1"
+
+[node name="X" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 14.0
+text = "X"
+
+[connection signal="body_entered" from="Actionable" to="." method="_on_actionable_body_entered"]
+[connection signal="timeout" from="OverheatTimer" to="." method="_on_overheat_timer_timeout"]
+[connection signal="timeout" from="KaboomTimer" to="." method="_on_kaboom_timer_timeout"]

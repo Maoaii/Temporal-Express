@@ -19,6 +19,7 @@ signal nearest_actionable_changed
 @onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 var has_oil: bool = false
+var has_hammer: bool = false
 var doing_task: bool = false
 var nearest_actionable
 
@@ -59,9 +60,18 @@ func cancel_interaction() -> void:
 	taskbar.value = 0
 
 func _on_task_timer_timeout():
-	if nearest_actionable.owner.name == "Coal Supply":
-		var game_manager: GameManager = get_tree().get_first_node_in_group("GameManager")
-		game_manager.add_coal()   
+	var interacted_object = nearest_actionable.owner
+	if interacted_object.name == "Coal Supply":
+		if interacted_object.working:
+			var game_manager: GameManager = get_tree().get_first_node_in_group("GameManager")
+			game_manager.add_coal()
+	if interacted_object.name == "Honk":
+		# interacted_object.honk()
+		# sigmal game manager to get rid of cow in the way
+		pass
+	if interacted_object.name == "Pressure Valve":
+		var coal_supply = get_tree().get_first_node_in_group("CoalSupply")
+		coal_supply.relief_pressure()
 
 
 func _physics_process(_delta: float) -> void:
@@ -109,9 +119,14 @@ func handle_rotation() -> void:
 func acquired_oil() -> void:
 	has_oil = true
 
-
 func used_oil() -> void:
 	has_oil = false
+
+func acquired_hammer() -> void:
+	has_hammer = true
+
+func used_hammer() -> void:
+	has_hammer = false
 
 
 func check_nearest_actionable() -> void:
