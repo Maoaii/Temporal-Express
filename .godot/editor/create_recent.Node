@@ -1,7 +1,9 @@
+Label
+TextEdit
+Timer
 CollisionShape2D
 Area2D
 Marker2D
-Timer
 ProgressBar
 Node2D
 Sprite2D

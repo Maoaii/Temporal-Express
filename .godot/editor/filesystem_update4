@@ -14,3 +14,6 @@ res://scripts/player.gd
 res://scripts/coal_supply.gd
 res://scripts/actionable.gd
 res://scenes/actionable.tscn
+res://scenes/game_manager.tscn
+res://scripts/game_manager.gd
+res://scenes/oil.tscn

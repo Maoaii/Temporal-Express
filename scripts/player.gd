@@ -25,6 +25,7 @@ var nearest_actionable
 
 func _ready() -> void:
 	taskbar.visible = false
+	taskbar.max_value = tasktimer.wait_time
 
 func _process(delta: float) -> void:
 	if CLICK_AND_MOVE:
@@ -37,19 +38,30 @@ func _process(delta: float) -> void:
 	check_nearest_actionable()
 	
 	if Input.is_action_pressed("interact") and nearest_actionable:
-		doing_task = true
-		taskbar.visible = true
-		
-		if tasktimer.is_stopped():
-			tasktimer.start()
-		taskbar.value = abs(taskbar.max_value - tasktimer.time_left)
-
+		interact()
 	elif Input.is_action_just_released("interact") or not nearest_actionable:
-		doing_task = false
-		taskbar.visible = false
-		tasktimer.stop()
-		taskbar.value = 0
+		cancel_interaction()
 
+func interact() -> void:
+	doing_task = true
+	taskbar.visible = true
+	
+	if tasktimer.is_stopped():
+		tasktimer.start()
+	
+	taskbar.value = abs(taskbar.max_value - tasktimer.time_left)
+
+
+func cancel_interaction() -> void:
+	doing_task = false
+	taskbar.visible = false
+	tasktimer.stop()
+	taskbar.value = 0
+
+func _on_task_timer_timeout():
+	if nearest_actionable.owner.name == "Coal Supply":
+		var game_manager: GameManager = get_tree().get_first_node_in_group("GameManager")
+		game_manager.add_coal()   
 
 
 func _physics_process(_delta: float) -> void:
