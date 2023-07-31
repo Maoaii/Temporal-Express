@@ -23,9 +23,11 @@ shape = SubResource("CircleShape2D_8a0px")
 
 [node name="Health" parent="." instance=ExtResource("2_2sx7v")]
 position = Vector2(0, -51)
+max_health = 100
 show_percentage = true
 
 [node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
+wait_time = 5.0
 time_to_tick = 1.0
 
 [node name="InteractableArea" type="Area2D" parent="."]

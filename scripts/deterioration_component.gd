@@ -7,3 +7,6 @@ func _ready():
 	wait_time = time_to_tick
 	
 	start()
+
+func _process(_delta: float) -> void:
+	wait_time = time_to_tick

@@ -17,3 +17,8 @@ res://scenes/actionable.tscn
 res://scenes/game_manager.tscn
 res://scripts/game_manager.gd
 res://scenes/oil.tscn
+res://scripts/background.gd
+res://scripts/deterioration_component.gd
+res://scenes/honk.tscn
+res://scenes/deterioration_component.tscn
+res://scripts/honk.gd

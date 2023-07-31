@@ -8,6 +8,10 @@ extends StaticBody2D
 func _ready() -> void:
 	sprite.play("Spinning")
 
+func _process(_delta: float) -> void:
+	sprite.speed_scale = get_tree().get_first_node_in_group("GameManager").gear_turning_speed
+	deterioration.time_to_tick = get_tree().get_first_node_in_group("GameManager").deterioration_speed
+
 func _on_deterioration_component_timeout() -> void:
 	health.take_damage(1)
 
