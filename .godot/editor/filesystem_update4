@@ -7,3 +7,6 @@ res://scenes/first_carriage.tscn
 res://scripts/train.gd
 res://scenes/carriage.tscn
 res://scenes/last_carriage.tscn
+res://scenes/coal_supply.tscn
+res://scenes/interactive_area.tscn
+res://scripts/interactive_area.gd

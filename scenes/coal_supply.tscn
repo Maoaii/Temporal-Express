@@ -1,21 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://byg62u7phovk1"]
 
 [ext_resource type="Script" path="res://scripts/coal_supply.gd" id="1_frxmi"]
-[ext_resource type="Texture2D" uid="uid://cx608q7adkqjt" path="res://assets/coal_supply.png" id="1_nsso7"]
 [ext_resource type="PackedScene" uid="uid://dxm1u6utisu5h" path="res://scenes/interactive_area.tscn" id="2_6a5dy"]
+[ext_resource type="Texture2D" uid="uid://dkr57txbqo2jt" path="res://assets/coal_supply.ase" id="2_ow0ck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cv6uq"]
-size = Vector2(128, 128)
+size = Vector2(64, 32)
 
 [node name="Coal Supply" type="StaticBody2D"]
 script = ExtResource("1_frxmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_nsso7")
+texture = ExtResource("2_ow0ck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cv6uq")
 
 [node name="InteractiveArea" parent="." instance=ExtResource("2_6a5dy")]
-
-[connection signal="clicked" from="InteractiveArea" to="." method="_on_interactive_area_clicked"]
+radius = 300.0

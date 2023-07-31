@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c57q8drwfpyag"]
+[gd_scene load_steps=8 format=3 uid="uid://c57q8drwfpyag"]
 
 [ext_resource type="PackedScene" uid="uid://dhoms2wesdns0" path="res://scenes/player.tscn" id="1_8n7i0"]
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_n2h5o"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://n0nqr2ima3b7" path="res://scenes/oil.tscn" id="4_fo50p"]
 [ext_resource type="PackedScene" uid="uid://ca0idm22x50as" path="res://scenes/background.tscn" id="6_hy4g3"]
 [ext_resource type="PackedScene" uid="uid://8bgupic0vjsj" path="res://scenes/train.tscn" id="6_uctve"]
+[ext_resource type="PackedScene" uid="uid://byg62u7phovk1" path="res://scenes/coal_supply.tscn" id="7_j80mq"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_n2h5o")
@@ -17,10 +18,13 @@ position = Vector2(159, 135)
 position = Vector2(484, 149)
 
 [node name="Gear" parent="." instance=ExtResource("3_xmov2")]
-position = Vector2(736, 144)
+position = Vector2(797, 164)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(406, 166)
 
 [node name="Background" parent="." instance=ExtResource("6_hy4g3")]
 background_scroll = Vector2(200, 2.08165e-12)
+
+[node name="Coal Supply" parent="." instance=ExtResource("7_j80mq")]
+position = Vector2(735, 121)
