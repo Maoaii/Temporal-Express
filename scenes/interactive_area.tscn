@@ -1,18 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxm1u6utisu5h"]
+[gd_scene load_steps=3 format=3 uid="uid://dhxa7bvijj5nh"]
 
-[ext_resource type="Script" path="res://scripts/interactive_area.gd" id="1_qoxq8"]
+[sub_resource type="GDScript" id="GDScript_u0vyi"]
+script/source = "class_name InteractiveArea
+extends Area2D
+
+signal player_near(player)
+signal player_left(player)
+
+@export var clickable: bool
+@export var radius: float
+
+var player: Player
+
+func _ready() -> void:
+	$CollisionShape2D.shape.radius = radius
+
+
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		player = body
+		emit_signal(\"player_near\", player)
+
+
+func _on_body_exited(body):
+	if body.name == \"Player\":
+		player = null
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rmd2m"]
 radius = 31.0
 
 [node name="InteractiveArea" type="Area2D"]
-script = ExtResource("1_qoxq8")
-radius = 200.0
+script = SubResource("GDScript_u0vyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rmd2m")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

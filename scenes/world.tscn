@@ -18,7 +18,7 @@ position = Vector2(159, 135)
 position = Vector2(484, 149)
 
 [node name="Gear" parent="." instance=ExtResource("3_xmov2")]
-position = Vector2(797, 164)
+position = Vector2(586, 129)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(406, 166)

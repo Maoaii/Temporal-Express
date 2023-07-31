@@ -1,6 +1,9 @@
-Node2D
-Area2D
 CollisionShape2D
+Area2D
+Marker2D
+Timer
+ProgressBar
+Node2D
 Sprite2D
 StaticBody2D
 ParallaxBackground
@@ -9,6 +12,4 @@ ColorRect
 CanvasLayer
 CanvasModulate
 Camera2D
-Timer
-ProgressBar
 CharacterBody2D

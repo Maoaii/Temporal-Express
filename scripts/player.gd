@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
+signal task_completed
+signal nearest_actionable_changed
 
 @export_group("Movement variables")
 @export var MAX_SPEED: float
@@ -11,15 +13,43 @@ extends CharacterBody2D
 @export var CLICK_AND_MOVE: bool
 @export var CLICK_AND_MOVE_DEADZONE: float
 
+@onready var taskbar: ProgressBar = $Taskbar
+@onready var tasktimer: Timer = $TaskTimer
+@onready var direction: Marker2D = $Direction
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 var has_oil: bool = false
+var doing_task: bool = false
+var nearest_actionable
 
+
+func _ready() -> void:
+	taskbar.visible = false
 
 func _process(delta: float) -> void:
 	if CLICK_AND_MOVE:
 		handle_click_movement(delta)
 	else:
 		handle_movement(delta)
+	
+	handle_rotation()
+	
+	check_nearest_actionable()
+	
+	if Input.is_action_pressed("interact") and nearest_actionable:
+		doing_task = true
+		taskbar.visible = true
+		
+		if tasktimer.is_stopped():
+			tasktimer.start()
+		taskbar.value = abs(taskbar.max_value - tasktimer.time_left)
+
+	elif Input.is_action_just_released("interact") or not nearest_actionable:
+		doing_task = false
+		taskbar.visible = false
+		tasktimer.stop()
+		taskbar.value = 0
+
 
 
 func _physics_process(_delta: float) -> void:
@@ -27,7 +57,7 @@ func _physics_process(_delta: float) -> void:
 
 
 func handle_click_movement(delta: float) -> void:
-	if Input.is_action_pressed("move_click"):
+	if Input.is_action_pressed("move_click") and not doing_task:
 		var target = get_global_mouse_position()
 		
 		velocity += position.direction_to(target) * ACCELERATION * MAX_SPEED * delta
@@ -41,15 +71,28 @@ func handle_click_movement(delta: float) -> void:
 
 
 func handle_movement(delta: float) -> void:
-	var direction: Vector2 = Input.get_vector("left", "right", "up", "down")
+	var current_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 	
-	if direction != Vector2.ZERO:
-		velocity += direction * ACCELERATION * MAX_SPEED * delta
+	if current_dir != Vector2.ZERO and not doing_task:
+		velocity += current_dir * ACCELERATION * MAX_SPEED * delta
 	elif velocity != Vector2.ZERO:
 		velocity = velocity.lerp(Vector2.ZERO, FRICTION * delta)
 	
 	velocity = velocity.limit_length(MAX_SPEED)
 
+
+func handle_rotation() -> void:
+	if doing_task:
+		return
+	
+	if Input.is_action_pressed("up"):
+		direction.rotation = PI
+	elif Input.is_action_pressed("right"):
+		direction.rotation = -PI/2
+	elif Input.is_action_pressed("down"):
+		direction.rotation = 0
+	elif Input.is_action_pressed("left"):
+		direction.rotation = PI/2
 
 func acquired_oil() -> void:
 	has_oil = true
@@ -57,3 +100,19 @@ func acquired_oil() -> void:
 
 func used_oil() -> void:
 	has_oil = false
+
+
+func check_nearest_actionable() -> void:
+	var areas: Array[Area2D] = actionable_finder.get_overlapping_areas()
+	var shortest_distance: float = INF
+	var next_nearest_actionable = null
+	
+	for area in areas:
+		var distance: float = area.global_position.distance_to(global_position)
+		if distance < shortest_distance and area.collision_layer == 512:
+			shortest_distance = distance
+			next_nearest_actionable = area
+	
+	if next_nearest_actionable != nearest_actionable or not is_instance_valid(next_nearest_actionable):
+		nearest_actionable = next_nearest_actionable
+		emit_signal("nearest_actionable_changed", nearest_actionable)

@@ -12,10 +12,17 @@ func _on_deterioration_component_timeout() -> void:
 	health.take_damage(1)
 
 
-func _on_interactive_area_on_interacted(player: Player) -> void:
-	if player.has_oil:
-		player.used_oil()
-		health.full_heal()
+func _on_interactable_area_body_entered(body):
+	if body.name == "Player":
+		var player: Player = body
 		
+		if player.has_oil:
+			player.used_oil()
+			health.full_heal()
+			
 		if deterioration:
 			deterioration.start()
+
+
+func _on_interactable_area_body_exited(body):
+	pass # Replace with function body.

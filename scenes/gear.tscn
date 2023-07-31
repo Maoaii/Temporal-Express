@@ -3,11 +3,13 @@
 [ext_resource type="Script" path="res://scripts/gear.gd" id="1_6phrw"]
 [ext_resource type="PackedScene" uid="uid://bxa3115ih8rg1" path="res://scenes/health.tscn" id="2_2sx7v"]
 [ext_resource type="PackedScene" uid="uid://ylmhbshc7jmh" path="res://assets/gear.ase" id="2_rnlpg"]
-[ext_resource type="PackedScene" uid="uid://dxm1u6utisu5h" path="res://scenes/interactive_area.tscn" id="4_4t8xj"]
 [ext_resource type="PackedScene" uid="uid://b5am3v31w4t2v" path="res://scenes/deterioration_component.tscn" id="5_ck8et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a0px"]
 radius = 15.0333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppcg0"]
+radius = 28.0713
 
 [node name="Gear" type="StaticBody2D" node_paths=PackedStringArray("health", "deterioration")]
 script = ExtResource("1_6phrw")
@@ -26,10 +28,11 @@ show_percentage = true
 [node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
 time_to_tick = 1.0
 
-[node name="InteractiveArea" parent="." instance=ExtResource("4_4t8xj")]
-radius = 32.0
+[node name="InteractableArea" type="Area2D" parent="."]
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = SubResource("CircleShape2D_ppcg0")
+
 [connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
-[connection signal="on_interacted" from="InteractiveArea" to="." method="_on_interactive_area_on_interacted"]
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]

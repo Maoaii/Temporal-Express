@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhoms2wesdns0"]
+[gd_scene load_steps=5 format=3 uid="uid://dhoms2wesdns0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lc1hh"]
 [ext_resource type="Texture2D" uid="uid://d2ds6gy71g1yu" path="res://assets/player/player.png" id="2_7ahjk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwhfm"]
 size = Vector2(12, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ms01"]
+radius = 7.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_lc1hh")
@@ -23,3 +26,25 @@ shape = SubResource("RectangleShape2D_wwhfm")
 limit_left = 0
 limit_top = 0
 drag_vertical_enabled = true
+
+[node name="Taskbar" type="ProgressBar" parent="."]
+offset_left = -15.0
+offset_top = 10.0
+offset_right = 15.0
+offset_bottom = 17.0
+max_value = 4.0
+show_percentage = false
+
+[node name="TaskTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+collision_mask = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+position = Vector2(-2.84217e-14, 14)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7ms01")
