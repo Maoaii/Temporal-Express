@@ -1,21 +1,21 @@
 [gd_scene load_steps=8 format=3 uid="uid://c0w83vfm8xf3e"]
 
-[ext_resource type="PackedScene" uid="uid://bjwml1ltsqsll" path="res://assets/train/first_carriage.ase" id="1_v8ybw"]
+[ext_resource type="PackedScene" uid="uid://dnpi3b6tsdlrt" path="res://assets/train/first_carriage.ase" id="1_v8ybw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g48r1"]
-size = Vector2(27, 36)
+size = Vector2(27, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mad2p"]
-size = Vector2(27, 27)
+size = Vector2(27.5, 37.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mogwi"]
-size = Vector2(185, 28)
+size = Vector2(185, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yd5c4"]
 size = Vector2(14, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d43s"]
-size = Vector2(178, 11)
+size = Vector2(178, 11.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7l7r"]
 size = Vector2(198, 96)
@@ -26,27 +26,27 @@ size = Vector2(198, 96)
 animation = &"Opened"
 
 [node name="BottomLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-146.5, 46)
+position = Vector2(-146.5, 41)
 shape = SubResource("RectangleShape2D_g48r1")
 
 [node name="TopLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-146.5, -17.5)
+position = Vector2(-146.75, -22.75)
 shape = SubResource("RectangleShape2D_mad2p")
 
 [node name="Bottom" type="CollisionShape2D" parent="."]
-position = Vector2(-58.5, 65)
+position = Vector2(-58, 57)
 shape = SubResource("RectangleShape2D_mogwi")
 
 [node name="Right" type="CollisionShape2D" parent="."]
-position = Vector2(27, 16)
+position = Vector2(27, 8)
 shape = SubResource("RectangleShape2D_yd5c4")
 
 [node name="Top" type="CollisionShape2D" parent="."]
-position = Vector2(-55, -30.5)
+position = Vector2(-56, -30.875)
 shape = SubResource("RectangleShape2D_7d43s")
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="PlayerDetectionCollider" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(-65, 16)
+position = Vector2(-61, 10)
 shape = SubResource("RectangleShape2D_b7l7r")

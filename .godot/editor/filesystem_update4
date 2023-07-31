@@ -3,3 +3,7 @@ res://scenes/player.tscn
 res://scenes/train.tscn
 res://scenes/world.tscn
 res://scripts/gear.gd
+res://scenes/first_carriage.tscn
+res://scripts/train.gd
+res://scenes/carriage.tscn
+res://scenes/last_carriage.tscn

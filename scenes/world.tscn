@@ -14,13 +14,13 @@ script = ExtResource("1_n2h5o")
 position = Vector2(159, 135)
 
 [node name="Player" parent="." instance=ExtResource("1_8n7i0")]
-position = Vector2(486, 144)
+position = Vector2(484, 149)
 
 [node name="Gear" parent="." instance=ExtResource("3_xmov2")]
 position = Vector2(736, 144)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
-position = Vector2(406, 175)
+position = Vector2(406, 166)
 
 [node name="Background" parent="." instance=ExtResource("6_hy4g3")]
 background_scroll = Vector2(200, 2.08165e-12)
