@@ -7,3 +7,5 @@ res://scenes/oil.tscn
 res://scenes/carriage.tscn
 res://scenes/last_carriage.tscn
 res://scripts/first_carriage.gd
+res://scenes/background.tscn
+res://scripts/background.gd

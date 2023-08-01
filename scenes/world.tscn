@@ -26,13 +26,13 @@ position = Vector2(720, 141)
 position = Vector2(804, 165)
 
 [node name="Coal Supply" parent="." instance=ExtResource("7_j80mq")]
-position = Vector2(514, 121)
+position = Vector2(514, 113)
 
 [node name="Honk" parent="." instance=ExtResource("9_2oxke")]
 position = Vector2(785, 98)
 
 [node name="Pressure Valve" parent="." instance=ExtResource("10_8vbt1")]
-position = Vector2(562, 105)
+position = Vector2(562, 97)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(458, 120)
