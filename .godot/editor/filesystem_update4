@@ -1,7 +1,6 @@
-res://scenes/first_carriage.tscn
+res://scenes/player.tscn
+res://scripts/player.gd
 res://scenes/world.tscn
 res://scenes/train.tscn
-res://scripts/first_carriage.gd
-res://scripts/deterioration_component.gd
-res://scripts/last_carriage.gd
+res://scenes/first_carriage.tscn
 res://scenes/smoke.tscn

@@ -56,7 +56,6 @@ position = Vector2(-61, 10)
 shape = SubResource("RectangleShape2D_b7l7r")
 
 [node name="Smoke" parent="." instance=ExtResource("2_rb6rr")]
-gravity = Vector2(2.08165e-12, -400)
 
 [node name="Smoke2" parent="." instance=ExtResource("2_rb6rr")]
 position = Vector2(96, -19)

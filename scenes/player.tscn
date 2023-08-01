@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhoms2wesdns0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lc1hh"]
-[ext_resource type="Texture2D" uid="uid://d2ds6gy71g1yu" path="res://assets/player/player.png" id="2_7ahjk"]
+[ext_resource type="PackedScene" uid="uid://cfsnvwc8i6pbm" path="res://assets/player/player.ase" id="2_owp6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwhfm"]
-size = Vector2(12, 16)
+size = Vector2(13, 16)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ms01"]
 radius = 7.0
@@ -16,10 +16,12 @@ ACCELERATION = 30.0
 FRICTION = 30.0
 CLICK_AND_MOVE_DEADZONE = 10.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ahjk")
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_owp6i")]
+animation = &"Task"
+frame_progress = 0.845289
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_wwhfm")
 
 [node name="Camera2D" type="Camera2D" parent="."]

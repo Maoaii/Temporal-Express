@@ -13,6 +13,7 @@ signal nearest_actionable_changed
 @export var CLICK_AND_MOVE: bool
 @export var CLICK_AND_MOVE_DEADZONE: float
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var taskbar: ProgressBar = $Taskbar
 @onready var tasktimer: Timer = $TaskTimer
 @onready var direction: Marker2D = $Direction
@@ -36,10 +37,28 @@ func _process(delta: float) -> void:
 		handle_movement(delta)
 		handle_interaction()
 	
-	handle_rotation()
+	handle_sprite_animation()
+	
+	handle_direction_rotation()
 	
 	check_nearest_actionable()
+
+
+func handle_sprite_animation() -> void:
+	var current_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 	
+	if doing_task:
+		sprite.play("Task")
+	elif current_dir != Vector2.ZERO:
+		sprite.play("Walking")
+		
+		if current_dir.x > 0:
+			sprite.flip_h = false
+		elif current_dir.x < 0:
+			sprite.flip_h = true
+	else:
+		sprite.play("Idle")
+
 
 func handle_interaction() -> void:
 	if Input.is_action_pressed("interact") and nearest_actionable:
@@ -113,7 +132,7 @@ func handle_movement(delta: float) -> void:
 	velocity = velocity.limit_length(MAX_SPEED)
 
 
-func handle_rotation() -> void:
+func handle_direction_rotation() -> void:
 	if doing_task:
 		return
 	
