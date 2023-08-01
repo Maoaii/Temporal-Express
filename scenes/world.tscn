@@ -32,7 +32,7 @@ position = Vector2(514, 121)
 position = Vector2(785, 98)
 
 [node name="Pressure Valve" parent="." instance=ExtResource("10_8vbt1")]
-position = Vector2(562, 109)
+position = Vector2(562, 105)
 
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(458, 120)

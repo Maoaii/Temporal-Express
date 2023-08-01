@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0w83vfm8xf3e"]
+[gd_scene load_steps=10 format=3 uid="uid://c0w83vfm8xf3e"]
 
 [ext_resource type="Script" path="res://scripts/first_carriage.gd" id="1_0qa5o"]
+[ext_resource type="PackedScene" uid="uid://5c3kv4fmliqk" path="res://assets/train/first_carriage.ase" id="2_dwq30"]
 [ext_resource type="PackedScene" uid="uid://msxshxryt86g" path="res://scenes/smoke.tscn" id="2_rb6rr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g48r1"]
@@ -24,6 +25,9 @@ size = Vector2(198, 96)
 [node name="First Carriage" type="StaticBody2D" node_paths=PackedStringArray("smokes")]
 script = ExtResource("1_0qa5o")
 smokes = [NodePath("Smoke"), NodePath("Smoke2"), NodePath("Smoke3")]
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_dwq30")]
+animation = &"Opened"
 
 [node name="BottomLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-146.5, 41)
