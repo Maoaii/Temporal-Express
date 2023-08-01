@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0w83vfm8xf3e"]
+[gd_scene load_steps=10 format=3 uid="uid://c0w83vfm8xf3e"]
 
+[ext_resource type="Script" path="res://scripts/first_carriage.gd" id="1_0qa5o"]
 [ext_resource type="PackedScene" uid="uid://dnpi3b6tsdlrt" path="res://assets/train/first_carriage.ase" id="1_v8ybw"]
+[ext_resource type="PackedScene" uid="uid://msxshxryt86g" path="res://scenes/smoke.tscn" id="2_rb6rr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g48r1"]
 size = Vector2(27, 26)
@@ -20,7 +22,9 @@ size = Vector2(178, 11.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7l7r"]
 size = Vector2(198, 96)
 
-[node name="First Carriage" type="StaticBody2D"]
+[node name="First Carriage" type="StaticBody2D" node_paths=PackedStringArray("smokes")]
+script = ExtResource("1_0qa5o")
+smokes = [NodePath("Smoke"), NodePath("Smoke2"), NodePath("Smoke3")]
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("1_v8ybw")]
 animation = &"Opened"
@@ -50,3 +54,14 @@ shape = SubResource("RectangleShape2D_7d43s")
 [node name="PlayerDetectionCollider" type="CollisionShape2D" parent="PlayerDetection"]
 position = Vector2(-61, 10)
 shape = SubResource("RectangleShape2D_b7l7r")
+
+[node name="Smoke" parent="." instance=ExtResource("2_rb6rr")]
+gravity = Vector2(2.08165e-12, -400)
+
+[node name="Smoke2" parent="." instance=ExtResource("2_rb6rr")]
+position = Vector2(96, -19)
+emission_sphere_radius = 1.96
+
+[node name="Smoke3" parent="." instance=ExtResource("2_rb6rr")]
+position = Vector2(75, -18)
+emission_sphere_radius = 1.96
