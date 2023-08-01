@@ -1,34 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://btl4d6fb7d1j"]
+[gd_scene load_steps=8 format=3 uid="uid://btl4d6fb7d1j"]
 
-[ext_resource type="Texture2D" uid="uid://cq0p63ls5osdh" path="res://assets/train/middle_carriage.png" id="1_32fpg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uws4c"]
-atlas = ExtResource("1_32fpg")
-region = Rect2(0, 0, 320, 160)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kl8vn"]
-atlas = ExtResource("1_32fpg")
-region = Rect2(320, 0, 320, 150)
-margin = Rect2(0, 10, 0, 10)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pupd6"]
-animations = [{
-"frames": [{
-"duration": 0.1,
-"texture": SubResource("AtlasTexture_uws4c")
-}],
-"loop": true,
-"name": &"Closed",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 0.1,
-"texture": SubResource("AtlasTexture_kl8vn")
-}],
-"loop": true,
-"name": &"Opened",
-"speed": 1.0
-}]
+[ext_resource type="PackedScene" uid="uid://b7jt7shcof0yj" path="res://assets/train/middle_carriage.ase" id="1_2jojr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8d8"]
 size = Vector2(328, 96)
@@ -50,9 +22,7 @@ size = Vector2(28, 28)
 
 [node name="Carriage" type="StaticBody2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_pupd6")
-animation = &"Opened"
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_2jojr")]
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 

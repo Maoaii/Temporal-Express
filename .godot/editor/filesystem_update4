@@ -1,7 +1,8 @@
-res://scenes/player.tscn
-res://scripts/player.gd
 res://scenes/world.tscn
 res://scenes/train.tscn
 res://scenes/first_carriage.tscn
 res://scenes/smoke.tscn
+res://scenes/player.tscn
 res://scenes/oil.tscn
+res://scenes/carriage.tscn
+res://scenes/last_carriage.tscn
