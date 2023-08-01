@@ -10,3 +10,6 @@ res://scenes/hammer.tscn
 res://scripts/hammer.gd
 res://scenes/oil.tscn
 res://scripts/oil.gd
+res://scenes/main_menu.tscn
+res://scripts/main_menu.gd
+res://scripts/world.gd

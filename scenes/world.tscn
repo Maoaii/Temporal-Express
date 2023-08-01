@@ -36,11 +36,11 @@ position = Vector2(562, 109)
 [node name="Oil" parent="." instance=ExtResource("4_fo50p")]
 position = Vector2(458, 120)
 
-[node name="Background" parent="." instance=ExtResource("6_hy4g3")]
-background_scroll = Vector2(200, 2.08165e-12)
+[node name="Hammer" parent="." instance=ExtResource("11_wl3rc")]
+position = Vector2(677, 174)
 
 [node name="GameManager" parent="." instance=ExtResource("8_shtql")]
 position = Vector2(0, 1)
 
-[node name="Hammer" parent="." instance=ExtResource("11_wl3rc")]
-position = Vector2(677, 174)
+[node name="Background" parent="." instance=ExtResource("6_hy4g3")]
+background_scroll = Vector2(200, 2.08165e-12)

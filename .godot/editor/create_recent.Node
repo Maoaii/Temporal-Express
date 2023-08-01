@@ -1,4 +1,8 @@
+VBoxContainer
+Button
 Label
+ColorRect
+CanvasLayer
 CollisionShape2D
 Area2D
 Timer
@@ -11,8 +15,6 @@ ProgressBar
 Node2D
 ParallaxBackground
 ParallaxLayer
-ColorRect
-CanvasLayer
 CanvasModulate
 Camera2D
 CharacterBody2D
