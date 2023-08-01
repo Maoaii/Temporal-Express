@@ -26,7 +26,3 @@ func _on_interactable_area_body_entered(body):
 			
 		if deterioration:
 			deterioration.start()
-
-
-func _on_interactable_area_body_exited(body):
-	pass # Replace with function body.

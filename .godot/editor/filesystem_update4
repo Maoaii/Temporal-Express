@@ -21,3 +21,9 @@ res://scripts/win_screen.gd
 res://scenes/pause_menu.tscn
 res://scripts/pause_menu.gd
 res://scenes/gui.tscn
+res://default_bus_layout.tres
+res://scenes/settings.tscn
+res://scripts/settings.gd
+res://scripts/gear.gd
+res://scenes/settings_popup.tscn
+res://scripts/settings_popup.gd

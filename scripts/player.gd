@@ -29,18 +29,28 @@ func _ready() -> void:
 	taskbar.max_value = tasktimer.wait_time
 
 func _process(delta: float) -> void:
-	if CLICK_AND_MOVE:
+	if Global.click_to_play:
 		handle_click_movement(delta)
+		handle_click_interaction()
 	else:
 		handle_movement(delta)
+		handle_interaction()
 	
 	handle_rotation()
 	
 	check_nearest_actionable()
 	
+
+func handle_interaction() -> void:
 	if Input.is_action_pressed("interact") and nearest_actionable:
 		interact()
 	elif Input.is_action_just_released("interact") or not nearest_actionable:
+		cancel_interaction()
+
+func handle_click_interaction() -> void:
+	if Input.is_action_pressed("click_interact") and nearest_actionable:
+		interact()
+	elif Input.is_action_just_released("click_interact") or not nearest_actionable:
 		cancel_interaction()
 
 func interact() -> void:

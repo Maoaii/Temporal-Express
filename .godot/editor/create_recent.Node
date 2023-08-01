@@ -1,8 +1,12 @@
-CanvasLayer
-Button
 VBoxContainer
 Label
+CheckBox
+HSeparator
+HSlider
+CheckButton
+Button
 ColorRect
+CanvasLayer
 Control
 CollisionShape2D
 Area2D
