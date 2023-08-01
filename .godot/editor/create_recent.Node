@@ -1,8 +1,9 @@
-VBoxContainer
+CanvasLayer
 Button
+VBoxContainer
 Label
 ColorRect
-CanvasLayer
+Control
 CollisionShape2D
 Area2D
 Timer

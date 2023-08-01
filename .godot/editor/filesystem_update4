@@ -13,3 +13,11 @@ res://scripts/oil.gd
 res://scenes/main_menu.tscn
 res://scripts/main_menu.gd
 res://scripts/world.gd
+res://scenes/lose_screen.tscn
+res://scripts/global.gd
+res://scripts/lose_screen.gd
+res://scenes/win_screen.tscn
+res://scripts/win_screen.gd
+res://scenes/pause_menu.tscn
+res://scripts/pause_menu.gd
+res://scenes/gui.tscn
