@@ -1,7 +1,36 @@
-[gd_scene load_steps=9 format=3 uid="uid://c68app6pgbibb"]
+[gd_scene load_steps=12 format=3 uid="uid://c68app6pgbibb"]
 
 [ext_resource type="Script" path="res://scripts/last_carriage.gd" id="1_fp24v"]
-[ext_resource type="PackedScene" uid="uid://c35mjih4tgcts" path="res://assets/train/last_carriage.ase" id="2_4ia0v"]
+[ext_resource type="Texture2D" uid="uid://cu1d7j8lbr7qc" path="res://assets/train/last_carriage.png" id="2_50qx5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emghy"]
+atlas = ExtResource("2_50qx5")
+region = Rect2(0, 0, 312, 156)
+margin = Rect2(8, 4, 8, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po4bs"]
+atlas = ExtResource("2_50qx5")
+region = Rect2(312, 0, 304, 151)
+margin = Rect2(16, 9, 16, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtm11"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_emghy")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_po4bs")
+}],
+"loop": true,
+"name": &"Opened",
+"speed": 1.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kc7i"]
 size = Vector2(308, 96)
@@ -21,10 +50,11 @@ size = Vector2(28, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrp1d"]
 size = Vector2(304, 19)
 
-[node name="Last Carriage" type="StaticBody2D"]
+[node name="Last Carriage" type="StaticBody2D" groups=["Carriage"]]
 script = ExtResource("1_fp24v")
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_4ia0v")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gtm11")
 animation = &"Opened"
 
 [node name="PlayerDetection" type="Area2D" parent="."]

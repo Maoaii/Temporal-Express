@@ -20,7 +20,7 @@ size = Vector2(28, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd3a"]
 size = Vector2(28, 28)
 
-[node name="Carriage" type="StaticBody2D"]
+[node name="Carriage" type="StaticBody2D" groups=["Carriage"]]
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("1_2jojr")]
 animation = &"Opened"

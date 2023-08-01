@@ -9,3 +9,5 @@ res://scenes/last_carriage.tscn
 res://scripts/first_carriage.gd
 res://scenes/background.tscn
 res://scripts/background.gd
+res://scenes/decoration.tscn
+res://scripts/train.gd

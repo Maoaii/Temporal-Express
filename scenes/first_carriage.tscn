@@ -22,7 +22,7 @@ size = Vector2(178, 11.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7l7r"]
 size = Vector2(198, 96)
 
-[node name="First Carriage" type="StaticBody2D" node_paths=PackedStringArray("smokes")]
+[node name="First Carriage" type="StaticBody2D" node_paths=PackedStringArray("smokes") groups=["Carriage"]]
 script = ExtResource("1_0qa5o")
 smokes = [NodePath("Smoke"), NodePath("Smoke2"), NodePath("Smoke3")]
 
