@@ -1,9 +1,86 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3gxda17jlacw"]
+[gd_scene load_steps=16 format=3 uid="uid://d3gxda17jlacw"]
 
 [ext_resource type="Script" path="res://scripts/gear.gd" id="1_6phrw"]
 [ext_resource type="PackedScene" uid="uid://bxa3115ih8rg1" path="res://scenes/health.tscn" id="2_2sx7v"]
-[ext_resource type="PackedScene" uid="uid://ylmhbshc7jmh" path="res://assets/gear.ase" id="2_rnlpg"]
+[ext_resource type="Texture2D" uid="uid://bl31h878p7ljv" path="res://assets/gear.png" id="2_8krd6"]
 [ext_resource type="PackedScene" uid="uid://b5am3v31w4t2v" path="res://scenes/deterioration_component.tscn" id="5_ck8et"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78f0k"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eoah"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttkrk"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arg30"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hc2m3"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g645m"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws2g8"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l635r"]
+atlas = ExtResource("2_8krd6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fh2cg"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_78f0k")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_78f0k")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_4eoah")
+}],
+"loop": true,
+"name": &"Spinning",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ttkrk")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_arg30")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_hc2m3")
+}],
+"loop": true,
+"name": &"Spinning25",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_g645m")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ws2g8")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_l635r")
+}],
+"loop": true,
+"name": &"Spinning50",
+"speed": 1.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a0px"]
 radius = 15.0333
@@ -16,7 +93,9 @@ script = ExtResource("1_6phrw")
 health = NodePath("Health")
 deterioration = NodePath("DeteriorationComponent")
 
-[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_rnlpg")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fh2cg")
+animation = &"Spinning"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8a0px")

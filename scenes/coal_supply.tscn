@@ -47,6 +47,7 @@ offset_bottom = -11.0
 text = "1"
 
 [node name="X" type="Label" parent="."]
+visible = false
 offset_left = -5.0
 offset_top = -12.0
 offset_right = 12.0

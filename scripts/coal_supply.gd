@@ -8,10 +8,12 @@ var overheat: int = 0
 var working: bool = true
 
 func _process(_delta: float) -> void:
+	"""
 	if working:
 		$X.visible = false
 	else:
 		$X.visible = true
+	"""
 	
 	$Label.text = str(get_tree().get_first_node_in_group("GameManager").coal_amount)
 	overheat_label.text = str(overheat)
@@ -28,8 +30,11 @@ func _process(_delta: float) -> void:
 	if overheat > 9:
 		if kaboom_timer.is_stopped():
 			kaboom_timer.start()
+		else:
+			$Sprite2D.modulate = Color(abs(kaboom_timer.wait_time - kaboom_timer.time_left + 1), 0, 0)
 	else:
 		kaboom_timer.stop()
+		$Sprite2D.modulate = Color.WHITE
 
 
 func relief_pressure(amount: int = 2):
@@ -53,6 +58,7 @@ func _on_kaboom_timer_timeout():
 	
 	overheat = 0
 	get_tree().get_first_node_in_group("GameManager").coal_amount = 0
+	$Sprite2D.modulate = Color.BLACK
 
 
 func _on_actionable_body_entered(body):
@@ -63,3 +69,4 @@ func _on_actionable_body_entered(body):
 			player.used_hammer()
 			
 			working = true
+			$Sprite2D.modulate = Color.WHITE

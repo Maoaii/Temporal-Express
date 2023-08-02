@@ -27,6 +27,10 @@ func take_damage(amount: int) -> void:
 		emit_signal("on_health_depleted")
 
 
+func get_health() -> int:
+	return health_bar.value
+
+
 func heal(amount: int) -> void:
 	health_bar.value += amount
 	health_bar.value = min(health_bar.value, health_bar.max_value)
