@@ -1,14 +1,7 @@
-res://scenes/hammer.tscn
+res://scenes/first_carriage.tscn
 res://assets/ui/button.tres
-res://scenes/oil.tscn
-res://scripts/hammer.gd
-res://scenes/coal_supply.tscn
-res://scripts/coal_supply.gd
 res://scenes/train.tscn
 res://scenes/player.tscn
-res://scenes/world.tscn
-res://scenes/gear.tscn
-res://scenes/player_ui.tscn
 res://scenes/gui.tscn
-res://scripts/player_ui.gd
-res://scripts/oil.gd
+res://scenes/oil.tscn
+res://scenes/hammer.tscn
