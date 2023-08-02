@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3gxda17jlacw"]
+[gd_scene load_steps=17 format=3 uid="uid://d3gxda17jlacw"]
 
 [ext_resource type="Script" path="res://scripts/gear.gd" id="1_6phrw"]
 [ext_resource type="PackedScene" uid="uid://bxa3115ih8rg1" path="res://scenes/health.tscn" id="2_2sx7v"]
 [ext_resource type="Texture2D" uid="uid://bl31h878p7ljv" path="res://assets/gear.png" id="2_8krd6"]
+[ext_resource type="AudioStream" uid="uid://dh6q2niiiq4yk" path="res://assets/sound/gear-spinning-loop-6981.mp3" id="5_5ueyi"]
 [ext_resource type="PackedScene" uid="uid://b5am3v31w4t2v" path="res://scenes/deterioration_component.tscn" id="5_ck8et"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_78f0k"]
@@ -114,6 +115,13 @@ time_to_tick = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
 shape = SubResource("CircleShape2D_ppcg0")
 
+[node name="Gear Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_5ueyi")
+autoplay = true
+max_distance = 300.0
+bus = &"SFX"
+
 [connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
 [connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
 [connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]
+[connection signal="finished" from="Gear Sound" to="." method="_on_gear_sound_finished"]

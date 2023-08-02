@@ -38,6 +38,7 @@ max_value = 4.0
 show_percentage = false
 
 [node name="TaskTimer" type="Timer" parent="."]
+wait_time = 2.0
 one_shot = true
 
 [node name="Direction" type="Marker2D" parent="."]

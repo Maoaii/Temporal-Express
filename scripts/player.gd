@@ -33,16 +33,32 @@ func _process(delta: float) -> void:
 	if Global.click_to_play:
 		handle_click_movement(delta)
 		handle_click_interaction()
+		handle_click_direction_movement()
+		handle_click_sprite_animation()
 	else:
 		handle_movement(delta)
 		handle_interaction()
+		handle_direction_rotation()
+		handle_sprite_animation()
 	
-	handle_sprite_animation()
-	
-	handle_direction_rotation()
 	
 	check_nearest_actionable()
 
+
+func handle_click_sprite_animation() -> void:
+	var direction_to_mouse: Vector2 = position.direction_to(get_global_mouse_position())
+	
+	if doing_task:
+		sprite.play("Task")
+	elif Input.is_action_pressed("move_click"):
+		sprite.play("Walking")
+		
+		if direction_to_mouse.x > 0:
+			sprite.flip_h = false
+		elif direction_to_mouse.x < 0:
+			sprite.flip_h = true
+	else:
+		sprite.play("Idle")
 
 func handle_sprite_animation() -> void:
 	var current_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
@@ -72,6 +88,8 @@ func handle_click_interaction() -> void:
 	elif Input.is_action_just_released("click_interact") or not nearest_actionable:
 		cancel_interaction()
 
+
+
 func interact() -> void:
 	doing_task = true
 	taskbar.visible = true
@@ -94,10 +112,10 @@ func _on_task_timer_timeout():
 		if interacted_object.working:
 			var game_manager: GameManager = get_tree().get_first_node_in_group("GameManager")
 			game_manager.add_coal()
+			interacted_object.coal_sound()
 	if interacted_object.name == "Honk":
-		# interacted_object.honk()
+		interacted_object.honk()
 		# sigmal game manager to get rid of cow in the way
-		pass
 	if interacted_object.name == "Pressure Valve":
 		var coal_supply = get_tree().get_first_node_in_group("CoalSupply")
 		coal_supply.relief_pressure()
@@ -144,6 +162,19 @@ func handle_direction_rotation() -> void:
 		direction.rotation = 0
 	elif Input.is_action_pressed("left"):
 		direction.rotation = PI/2
+
+func handle_click_direction_movement() -> void:
+	var direction_to_mouse: Vector2 = position.direction_to(get_global_mouse_position())
+	
+	if direction_to_mouse.y < 0 and (direction_to_mouse.x - direction_to_mouse.y) > 0 and (direction_to_mouse.x - direction_to_mouse.y) < 1:
+		direction.rotation = PI
+	elif direction_to_mouse.y > 0 and (direction_to_mouse.x - direction_to_mouse.y) > -1 and (direction_to_mouse.x - direction_to_mouse.y) < 0:
+		direction.rotation = 0
+	elif direction_to_mouse.x < 0 and (direction_to_mouse.x - direction_to_mouse.y) < 0 and (direction_to_mouse.x - direction_to_mouse.y) > -1:
+		direction.rotation = PI/2
+	elif direction_to_mouse.x > 0 and (direction_to_mouse.x - direction_to_mouse.y) > 0 and (direction_to_mouse.x - direction_to_mouse.y) < 1:
+		direction.rotation = -PI/2
+
 
 func acquired_oil() -> void:
 	has_oil = true

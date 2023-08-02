@@ -35,3 +35,7 @@ func _on_interactable_area_body_entered(body):
 			
 		if deterioration:
 			deterioration.start()
+
+
+func _on_gear_sound_finished():
+	$"Gear Sound".play()
