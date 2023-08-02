@@ -116,7 +116,6 @@ func _on_task_timer_timeout():
 	if interacted_object.name == "Honk":
 		interacted_object.honk()
 		var train = get_tree().get_first_node_in_group("Train")
-		
 		if train.get_time_till_cow() <= 10:
 			train.cow_dealt_with()
 	if interacted_object.name == "Pressure Valve":

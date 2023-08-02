@@ -34,11 +34,11 @@ func take_cow_damage():
 func _on_interactable_area_body_entered(body):
 	if body.name == "Player":
 		var player: Player = body
-		
+
 		if player.has_oil:
 			player.used_oil()
 			health.full_heal()
-
+			get_tree().get_first_node_in_group("Oil").respawn_oil()
 			
 		if deterioration:
 			deterioration.start()

@@ -72,6 +72,7 @@ func _on_actionable_body_entered(body):
 		
 		if player.has_hammer and not working:
 			player.used_hammer()
+			get_tree().get_first_node_in_group("Hammer").respawn_hammer()
 			
 			working = true
 			$Sprite2D.modulate = Color.WHITE
