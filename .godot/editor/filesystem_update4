@@ -1,11 +1,9 @@
 res://scenes/lose_screen.tscn
+res://scripts/settings_popup.gd
 res://assets/ui/button.tres
 res://assets/ui/progress_bar.tres
 res://scenes/settings_popup.tscn
-res://scripts/deterioration_component.gd
-res://scripts/settings_popup.gd
-res://scenes/pause_menu.tscn
 res://scenes/settings.tscn
+res://scenes/pause_menu.tscn
 res://scenes/win_screen.tscn
-res://scripts/win_screen.gd
 res://scenes/world.tscn
