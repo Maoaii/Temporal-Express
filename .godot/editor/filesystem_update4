@@ -5,3 +5,11 @@ res://scenes/player.tscn
 res://scenes/gui.tscn
 res://scenes/oil.tscn
 res://scenes/hammer.tscn
+res://scenes/world.tscn
+res://scripts/player_ui.gd
+res://scenes/goal_time.tscn
+res://scenes/game_manager.tscn
+res://scripts/game_manager.gd
+res://scenes/player_ui.tscn
+res://scenes/coal_alert.tscn
+res://scripts/train.gd

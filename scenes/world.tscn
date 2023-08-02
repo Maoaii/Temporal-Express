@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://jy35igy8m0nc" path="res://scenes/game_manager.tscn" id="8_shtql"]
 [ext_resource type="PackedScene" uid="uid://b7854n2k1l8wq" path="res://scenes/gui.tscn" id="12_olhwg"]
 
-[node name="World" type="Node2D"]
+[node name="Level 3" type="Node2D"]
 script = ExtResource("1_n2h5o")
 
 [node name="Train" parent="." instance=ExtResource("6_uctve")]

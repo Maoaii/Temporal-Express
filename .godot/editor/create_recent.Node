@@ -1,10 +1,10 @@
 HBoxContainer
+VBoxContainer
 Label
 Timer
 Control
 Container
 ColorRect
-VBoxContainer
 AudioStreamPlayer2D
 Node
 AudioStreamPlayer
@@ -30,4 +30,3 @@ ParallaxBackground
 ParallaxLayer
 CanvasModulate
 Camera2D
-CharacterBody2D
