@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c68app6pgbibb"]
+[gd_scene load_steps=14 format=3 uid="uid://c68app6pgbibb"]
 
 [ext_resource type="Script" path="res://scripts/last_carriage.gd" id="1_fp24v"]
 [ext_resource type="Texture2D" uid="uid://cu1d7j8lbr7qc" path="res://assets/train/last_carriage.png" id="2_50qx5"]
@@ -50,6 +50,12 @@ size = Vector2(28, 23)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrp1d"]
 size = Vector2(304, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kofer"]
+size = Vector2(8, 53.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgv23"]
+size = Vector2(23, 16)
+
 [node name="Last Carriage" type="StaticBody2D" groups=["Carriage"]]
 script = ExtResource("1_fp24v")
 
@@ -82,3 +88,27 @@ shape = SubResource("RectangleShape2D_xpiiw")
 [node name="Top" type="CollisionShape2D" parent="."]
 position = Vector2(8, -34.5)
 shape = SubResource("RectangleShape2D_yrp1d")
+
+[node name="Separating Wall" type="CollisionShape2D" parent="."]
+position = Vector2(-61, -2.6875)
+shape = SubResource("RectangleShape2D_kofer")
+
+[node name="Separating Wall2" type="CollisionShape2D" parent="."]
+position = Vector2(24, -3)
+shape = SubResource("RectangleShape2D_kofer")
+
+[node name="Separating Wall3" type="CollisionShape2D" parent="."]
+position = Vector2(101, -2)
+shape = SubResource("RectangleShape2D_kofer")
+
+[node name="Separating Back Wall" type="CollisionShape2D" parent="."]
+position = Vector2(-68.5, 16)
+shape = SubResource("RectangleShape2D_qgv23")
+
+[node name="Separating Back Wall2" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 16)
+shape = SubResource("RectangleShape2D_qgv23")
+
+[node name="Separating Back Wall3" type="CollisionShape2D" parent="."]
+position = Vector2(93.5, 16)
+shape = SubResource("RectangleShape2D_qgv23")
