@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxa3115ih8rg1"]
+[gd_scene load_steps=5 format=3 uid="uid://bxa3115ih8rg1"]
 
 [ext_resource type="Script" path="res://scripts/health.gd" id="1_hudio"]
+[ext_resource type="StyleBox" uid="uid://b45xjjcej0ee3" path="res://assets/ui/button.tres" id="2_3sirh"]
+[ext_resource type="StyleBox" uid="uid://c0ogbkijwgyfh" path="res://assets/ui/progress_bar.tres" id="2_3t6yw"]
+[ext_resource type="FontFile" uid="uid://dxjs16561chir" path="res://assets/fonts/Eight-Bit Madness.ttf" id="2_nykgw"]
 
 [node name="Health" type="Node2D"]
 script = ExtResource("1_hudio")
@@ -12,4 +15,8 @@ health_step = 1
 offset_left = -47.0
 offset_right = 51.0
 offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("2_nykgw")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/background = ExtResource("2_3t6yw")
+theme_override_styles/fill = ExtResource("2_3sirh")
 show_percentage = false

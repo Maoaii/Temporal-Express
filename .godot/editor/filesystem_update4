@@ -13,3 +13,7 @@ res://scripts/game_manager.gd
 res://scenes/player_ui.tscn
 res://scenes/coal_alert.tscn
 res://scripts/train.gd
+res://scripts/win_screen.gd
+res://scenes/health.tscn
+res://scenes/gear.tscn
+res://assets/ui/progress_bar.tres
