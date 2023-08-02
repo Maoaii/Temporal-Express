@@ -2,6 +2,8 @@ extends StaticBody2D
 
 @export var health: Health
 @export var deterioration: Deterioration
+@export var deterioration_damage: int = 1
+@export var cow_damage: int = 10
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -21,7 +23,11 @@ func _process(_delta: float) -> void:
 		sprite.play("Spinning")
 
 func _on_deterioration_component_timeout() -> void:
-	health.take_damage(1)
+	health.take_damage(deterioration_damage)
+
+
+func take_cow_damage():
+	health.take_damage(cow_damage)
 
 
 func _on_interactable_area_body_entered(body):

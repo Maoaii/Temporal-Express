@@ -115,7 +115,10 @@ func _on_task_timer_timeout():
 			interacted_object.coal_sound()
 	if interacted_object.name == "Honk":
 		interacted_object.honk()
-		# sigmal game manager to get rid of cow in the way
+		var train = get_tree().get_first_node_in_group("Train")
+		
+		if train.get_time_till_cow() <= 10:
+			train.cow_dealt_with()
 	if interacted_object.name == "Pressure Valve":
 		var coal_supply = get_tree().get_first_node_in_group("CoalSupply")
 		coal_supply.relief_pressure()

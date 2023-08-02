@@ -1,5 +1,5 @@
 cffcf7cc5eb03ca20a5c49cce30ef619
-::res://::1690970362
+::res://::1690976362
 default_bus_layout.tres::AudioBusLayout::3393816136716384572::1690969777::0::1::::<><>::
 ::res://addons/::1690731109
 ::res://addons/nklbdev.aseprite_importers/::1690731110
@@ -36,7 +36,7 @@ Eight-Bit Madness.ttf::FontFile::8793325867063226445::1597770178::1690967170::1:
 ::res://assets/player/::1690900786
 player.ase::PackedScene::5161772367842014338::1690900784::1690900786::1::::<><>::uid://d2ds6gy71g1yu
 player.png::CompressedTexture2D::9061702581753556860::1690900786::1690900786::1::::<><>::
-::res://assets/sound/::1690974853
+::res://assets/sound/::1690974854
 2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3::AudioStreamMP3::1309876161378407898::1690969544::1690969553::1::::<><>::
 2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3::AudioStreamMP3::371217108543524473::1690969521::1690969553::1::::<><>::
 air-or-steam-pressure-release-29600.mp3::AudioStreamMP3::5607410274033275554::1690972162::1690972651::1::::<><>::
@@ -61,46 +61,49 @@ last_carriage.ase::PackedScene::6800805430274932320::1690934540::1690934540::1::
 last_carriage.png::CompressedTexture2D::6230531882326188762::1690934540::1690934540::1::::<><>::
 middle_carriage.ase::PackedScene::4652254804507934117::1690915534::1690915506::1::::<><>::
 middle_carriage.png::CompressedTexture2D::5948439912453914885::1690915506::1690915258::1::::<><>::
-::res://assets/ui/::1690973857
-button.tres::StyleBoxFlat::4485241520791122444::1690973857::0::1::::<><>::
-button_hover.tres::StyleBoxFlat::6027247495443925066::1690937913::0::1::::<><>::
+::res://assets/ui/::1690976357
+alert_bg.ase::PackedScene::6693852632814870433::1690975986::1690976357::1::::<><>::uid://bh157y67tybqm
+alert_bg.png::CompressedTexture2D::2933296375882441824::1690976357::1690976357::1::::<><>::
+button.tres::StyleBoxFlat::4485241520791122444::1690976329::0::1::::<><>::
+button_hover.tres::StyleBoxFlat::6027247495443925066::1690976329::0::1::::<><>::
 button_press.tres::StyleBoxFlat::2678950871257667050::1690938007::0::1::::<><>::
-::res://autoloads/::1690974547
-music_controller.tscn::PackedScene::7840880280489946058::1690974547::0::1::::<><>::res://scripts/music_controller.gd<>uid://swrp7fxb82qw::::res://assets/sound/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3<>uid://fj25kvf7qrrt::::res://assets/sound/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3
-::res://scenes/::1690974793
+::res://autoloads/::1690974980
+music_controller.tscn::PackedScene::7840880280489946058::1690974980::0::1::::<><>::res://scripts/music_controller.gd<>uid://swrp7fxb82qw::::res://assets/sound/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3<>uid://fj25kvf7qrrt::::res://assets/sound/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3
+::res://scenes/::1690976356
 actionable.tscn::PackedScene::4675441575908443650::1690815790::0::1::::<><>::res://scripts/actionable.gd
 background.tscn::PackedScene::4824942577810164086::1690918720::0::1::::<><>::res://scripts/background.gd<>uid://buc0fmonvg52c
 carriage.tscn::PackedScene::110131901597604089::1690936972::0::1::::<><>::uid://b7jt7shcof0yj
-coal_supply.tscn::PackedScene::4085270741333634306::1690974793::0::1::::<><>::res://scripts/coal_supply.gd<>uid://dkr57txbqo2jt::::res://assets/coal_supply.ase<>uid://b7u23swgdlwc5::::res://scenes/actionable.tscn<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://mww73s3ji1n::::res://assets/sound/fire-burning-coal-106751.mp3<>uid://bq7tjd37h24l4::::res://assets/sound/pressure relief.mp3<>uid://bbr25tiuk8k5k::::res://assets/sound/stircoals-69328-[AudioTrimmer.com] (1).mp3
+coal_supply.tscn::PackedScene::4085270741333634306::1690975024::0::1::::<><>::res://scripts/coal_supply.gd<>uid://dkr57txbqo2jt::::res://assets/coal_supply.ase<>uid://b7u23swgdlwc5::::res://scenes/actionable.tscn<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://mww73s3ji1n::::res://assets/sound/fire-burning-coal-106751.mp3<>uid://bq7tjd37h24l4::::res://assets/sound/pressure relief.mp3<>uid://bbr25tiuk8k5k::::res://assets/sound/stircoals-69328-[AudioTrimmer.com] (1).mp3<>uid://b1yqc41xs7vkx::::res://assets/sound/medium-explosion-40472.mp3
+cow_alert.tscn::PackedScene::2685230699358792445::1690976356::0::1::::<><>::uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf
 decoration.tscn::PackedScene::6548680729297464209::1690936972::0::1::::<><>::uid://wmwkyoucukbk
 deterioration_component.tscn::PackedScene::4492865746433367039::1690838878::0::1::::<><>::res://scripts/deterioration_component.gd
 first_carriage.tscn::PackedScene::6575033543221567192::1690936972::0::1::::<><>::res://scripts/first_carriage.gd<>uid://5c3kv4fmliqk
 game_manager.tscn::PackedScene::682998739045011856::1690836531::0::1::::<><>::res://scripts/game_manager.gd
-gear.tscn::PackedScene::9138337829315219778::1690974546::0::1::::<><>::res://scripts/gear.gd<>uid://bxa3115ih8rg1::::res://scenes/health.tscn<>uid://bl31h878p7ljv::::res://assets/gear.png<>uid://dh6q2niiiq4yk::::res://assets/sound/gear-spinning-loop-6981.mp3<>uid://b5am3v31w4t2v::::res://scenes/deterioration_component.tscn
-gui.tscn::PackedScene::4702462168803187192::1690966810::0::1::::<><>::uid://c24gsyrvusnrw
+gear.tscn::PackedScene::9138337829315219778::1690974980::0::1::::<><>::res://scripts/gear.gd<>uid://bxa3115ih8rg1::::res://scenes/health.tscn<>uid://bl31h878p7ljv::::res://assets/gear.png<>uid://dh6q2niiiq4yk::::res://assets/sound/gear-spinning-loop-6981.mp3<>uid://b5am3v31w4t2v::::res://scenes/deterioration_component.tscn
+gui.tscn::PackedScene::4702462168803187192::1690976356::0::1::::<><>::uid://c24gsyrvusnrw::::res://scenes/pause_menu.tscn
 hammer.tscn::PackedScene::1852882545809815346::1690936972::0::1::::<><>::uid://cl6cvkqt0btf
 health.tscn::PackedScene::4002512006132225058::1690727100::0::1::::<><>::res://scripts/health.gd
-honk.tscn::PackedScene::7001917548354640723::1690974547::0::1::::<><>::res://scripts/honk.gd<>uid://b7u23swgdlwc5::::res://scenes/actionable.tscn<>uid://bs5pgb3of2l53::::res://assets/honk.ase<>uid://drm40vgps4he::::res://assets/sound/train_horn.mp3
+honk.tscn::PackedScene::7001917548354640723::1690974980::0::1::::<><>::res://scripts/honk.gd<>uid://b7u23swgdlwc5::::res://scenes/actionable.tscn<>uid://bs5pgb3of2l53::::res://assets/honk.ase<>uid://drm40vgps4he::::res://assets/sound/train_horn.mp3
 interactive_area.tscn::PackedScene::7698121875634003537::1690814007::0::1::::<><>::
 last_carriage.tscn::PackedScene::7016847609386539083::1690936972::0::1::::<><>::res://scripts/last_carriage.gd<>uid://cu1d7j8lbr7qc
 lose_screen.tscn::PackedScene::8474328347189350612::1690970378::0::1::::<><>::res://scripts/lose_screen.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
-main_menu.tscn::PackedScene::8105022091363565926::1690971429::0::1::::<><>::res://scripts/main_menu.gd<>uid://c57q8drwfpyag::::res://scenes/world.tscn<>uid://buc0fmonvg52c::::res://assets/background.ase<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
-oil.tscn::PackedScene::964883239740581298::1690936972::0::1::::<><>::res://scripts/oil.gd<>uid://bcnqptrksa6ns
-pause_menu.tscn::PackedScene::6728204834531369148::1690971876::0::1::::<><>::res://scripts/pause_menu.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://bpmow2f7ybwhd::::res://scenes/settings_popup.tscn<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
-player.tscn::PackedScene::7680247445627932777::1690974546::0::1::::<><>::res://scripts/player.gd<>uid://cfsnvwc8i6pbm::::res://assets/player/player.ase
-pressure_valve.tscn::PackedScene::8718498089783958284::1690843588::0::1::::<><>::uid://cb1jbi3x68e51
+main_menu.tscn::PackedScene::8105022091363565926::1690976356::0::1::::<><>::res://scripts/main_menu.gd<>uid://c57q8drwfpyag::::res://scenes/world.tscn<>uid://buc0fmonvg52c::::res://assets/background.ase<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
 main_music.tscn::PackedScene::2432218098289815012::1690971196::0::1::::<><>::uid://fj25kvf7qrrt::::res://assets/sound/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3
 menu_music.tscn::PackedScene::794560688174363750::1690971429::0::1::::<><>::uid://swrp7fxb82qw::::res://assets/sound/2019-01-02_-_8_Bit_Menu_-_David_Renda_-_FesliyanStudios.com.mp3
-settings.tscn::PackedScene::1602153977878269187::1690974547::0::1::::<><>::res://scripts/settings.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres
-settings_popup.tscn::PackedScene::3464916624017488913::1690974547::0::1::::<><>::res://scripts/settings_popup.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
+oil.tscn::PackedScene::964883239740581298::1690936972::0::1::::<><>::res://scripts/oil.gd<>uid://bcnqptrksa6ns
+pause_menu.tscn::PackedScene::6728204834531369148::1690971876::0::1::::<><>::res://scripts/pause_menu.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://bpmow2f7ybwhd::::res://scenes/settings_popup.tscn<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
+player.tscn::PackedScene::7680247445627932777::1690974980::0::1::::<><>::res://scripts/player.gd<>uid://cfsnvwc8i6pbm::::res://assets/player/player.ase
+pressure_valve.tscn::PackedScene::8718498089783958284::1690843588::0::1::::<><>::uid://cb1jbi3x68e51
+settings.tscn::PackedScene::1602153977878269187::1690974980::0::1::::<><>::res://scripts/settings.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres
+settings_popup.tscn::PackedScene::3464916624017488913::1690974980::0::1::::<><>::res://scripts/settings_popup.gd<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
 smoke.tscn::PackedScene::880853962352594208::1690918720::0::1::::<><>::
-train.tscn::PackedScene::2318697035977628297::1690974546::0::1::::<><>::res://scripts/train.gd<>uid://c68app6pgbibb::::res://scenes/last_carriage.tscn<>uid://btl4d6fb7d1j::::res://scenes/carriage.tscn<>uid://c0w83vfm8xf3e::::res://scenes/first_carriage.tscn<>res://scripts/last_carriage.gd<>uid://c0kh2x7moimq8::::res://scenes/decoration.tscn<>uid://c601taib3nrnn::::res://scenes/honk.tscn<>uid://d3gxda17jlacw::::res://scenes/gear.tscn<>uid://byg62u7phovk1::::res://scenes/coal_supply.tscn<>uid://dwhknis0i6r21::::res://scenes/pressure_valve.tscn<>uid://n0nqr2ima3b7::::res://scenes/oil.tscn<>uid://1nsx71ijymja::::res://scenes/hammer.tscn<>uid://06ibtel0fkjl::::res://assets/sound/subway-passing-99262.mp3
+train.tscn::PackedScene::2318697035977628297::1690976356::0::1::::<><>::res://scripts/train.gd<>uid://c68app6pgbibb::::res://scenes/last_carriage.tscn<>uid://btl4d6fb7d1j::::res://scenes/carriage.tscn<>uid://c0w83vfm8xf3e::::res://scenes/first_carriage.tscn<>res://scripts/last_carriage.gd<>uid://c0kh2x7moimq8::::res://scenes/decoration.tscn<>uid://c601taib3nrnn::::res://scenes/honk.tscn<>uid://d3gxda17jlacw::::res://scenes/gear.tscn<>uid://byg62u7phovk1::::res://scenes/coal_supply.tscn<>uid://dwhknis0i6r21::::res://scenes/pressure_valve.tscn<>uid://n0nqr2ima3b7::::res://scenes/oil.tscn<>uid://1nsx71ijymja::::res://scenes/hammer.tscn<>uid://06ibtel0fkjl::::res://assets/sound/subway-passing-99262.mp3
 win_screen.tscn::PackedScene::2804395798700437052::1690971429::0::1::::<><>::res://scripts/win_screen.gd<>uid://c57q8drwfpyag::::res://scenes/world.tscn<>uid://b45xjjcej0ee3::::res://assets/ui/button.tres<>uid://dxjs16561chir::::res://assets/fonts/Eight-Bit Madness.ttf<>uid://cr4v5d251p0ve::::res://assets/ui/button_hover.tres<>uid://befx6updqr235::::res://assets/ui/button_press.tres
 world.tscn::PackedScene::6945597352578815278::1690970632::0::1::::<><>::uid://dhoms2wesdns0::::res://scenes/player.tscn<>res://scripts/world.gd<>uid://ca0idm22x50as::::res://scenes/background.tscn<>uid://8bgupic0vjsj::::res://scenes/train.tscn<>uid://jy35igy8m0nc::::res://scenes/game_manager.tscn<>uid://b7854n2k1l8wq::::res://scenes/gui.tscn
-::res://scripts/::1690974546
+::res://scripts/::1690975380
 actionable.gd::GDScript::-1::1690814430::0::1::::<>Area2D<>::
 background.gd::GDScript::-1::1690918296::0::1::::<>ParallaxBackground<>::
-coal_supply.gd::GDScript::-1::1690974546::0::1::::<>StaticBody2D<>::
+coal_supply.gd::GDScript::-1::1690974947::0::1::::<>StaticBody2D<>::
 deterioration_component.gd::GDScript::-1::1690888594::0::1::::Deterioration<>Timer<>::
 first_carriage.gd::GDScript::-1::1690916228::0::1::::<>Carriage<>::
 game_manager.gd::GDScript::-1::1690836518::0::1::::GameManager<>Node2D<>::
@@ -112,12 +115,12 @@ honk.gd::GDScript::-1::1690974367::0::1::::<>StaticBody2D<>::
 last_carriage.gd::GDScript::-1::1690888804::0::1::::Carriage<>StaticBody2D<>::
 lose_screen.gd::GDScript::-1::1690969945::0::1::::<>Control<>::
 main_menu.gd::GDScript::-1::1690971358::0::1::::<>Control<>::
+music_controller.gd::GDScript::-1::1690971346::0::1::::<>Node<>::
 oil.gd::GDScript::-1::1690843890::0::1::::<>Area2D<>::
 pause_menu.gd::GDScript::-1::1690971428::0::1::::<>Control<>::
-player.gd::GDScript::-1::1690974415::0::1::::Player<>CharacterBody2D<>::
-music_controller.gd::GDScript::-1::1690971346::0::1::::<>Node<>::
+player.gd::GDScript::-1::1690974932::0::1::::Player<>CharacterBody2D<>::
 settings.gd::GDScript::-1::1690974143::0::1::::<>Control<>::
 settings_popup.gd::GDScript::-1::1690974173::0::1::::<>Control<>::
-train.gd::GDScript::-1::1690972034::0::1::::<>Node2D<>::
+train.gd::GDScript::-1::1690975380::0::1::::<>Node2D<>::
 win_screen.gd::GDScript::-1::1690970679::0::1::::<>Control<>::
 world.gd::GDScript::-1::1690970423::0::1::::Level<>Node2D<>::

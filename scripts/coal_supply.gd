@@ -1,9 +1,12 @@
+class_name CoalSupply
 extends StaticBody2D
 
 @onready var overheat_label: Label = $OverheatLabel
 @onready var coal_label: Label = $CoalLabel
 @onready var overheat_timer: Timer = $OverheatTimer
 @onready var kaboom_timer: Timer = $KaboomTimer
+
+@export var max_heat: int = 10
 
 var overheat: int = 0
 var working: bool = true
@@ -28,7 +31,7 @@ func _process(_delta: float) -> void:
 		5:
 			overheat_timer.wait_time = 2
 	
-	if overheat > 9:
+	if overheat >= max_heat:
 		if kaboom_timer.is_stopped():
 			kaboom_timer.start()
 		else:
@@ -80,3 +83,13 @@ func _on_actionable_body_entered(body):
 
 func _on_coal_sound_finished():
 	$"Coal Sound".play()
+
+
+func is_overheating():
+	return overheat >= max_heat
+
+func get_overheat():
+	return overheat
+
+func get_overheat_time():
+	return kaboom_timer.time_left
