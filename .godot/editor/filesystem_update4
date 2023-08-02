@@ -11,3 +11,11 @@ res://scenes/oil.tscn
 res://scenes/gear.tscn
 res://scripts/gear.gd
 res://scripts/health.gd
+res://scenes/main_menu.tscn
+res://scenes/gui.tscn
+res://assets/ui/button.tres
+res://scenes/win_screen.tscn
+res://scenes/lose_screen.tscn
+res://scenes/pause_menu.tscn
+res://scenes/settings.tscn
+res://scenes/settings_popup.tscn
