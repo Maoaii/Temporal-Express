@@ -17,3 +17,8 @@ res://scripts/win_screen.gd
 res://scenes/health.tscn
 res://scenes/gear.tscn
 res://assets/ui/progress_bar.tres
+res://scenes/cow_alert.tscn
+res://scripts/hammer.gd
+res://scripts/world.gd
+res://scenes/level_2.tscn
+res://scenes/level_1.tscn

@@ -1,11 +1,13 @@
-ProgressBar
+CanvasLayer
+Label
+Button
+ColorRect
+Control
 HBoxContainer
 VBoxContainer
-Label
+ProgressBar
 Timer
-Control
 Container
-ColorRect
 AudioStreamPlayer2D
 Node
 AudioStreamPlayer
@@ -19,8 +21,6 @@ CheckBox
 HSeparator
 HSlider
 CheckButton
-Button
-CanvasLayer
 Area2D
 StaticBody2D
 TextEdit
