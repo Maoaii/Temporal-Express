@@ -9,7 +9,7 @@ size = Vector2(13, 16)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ms01"]
 radius = 7.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_lc1hh")
 MAX_SPEED = 200.0
 ACCELERATION = 30.0

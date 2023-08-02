@@ -1,9 +1,10 @@
+HBoxContainer
+Label
 Timer
 Control
 Container
 ColorRect
 VBoxContainer
-Label
 AudioStreamPlayer2D
 Node
 AudioStreamPlayer
