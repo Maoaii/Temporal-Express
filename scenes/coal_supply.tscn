@@ -31,10 +31,11 @@ position = Vector2(0, 14.5)
 shape = SubResource("RectangleShape2D_0rufa")
 
 [node name="OverheatTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [node name="KaboomTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 7.0
 one_shot = true
 
 [node name="CoalLabel" type="Label" parent="."]
@@ -55,15 +56,8 @@ theme_override_fonts/font = ExtResource("4_s52u5")
 theme_override_font_sizes/font_size = 16
 text = "Overheat: 1"
 
-[node name="X" type="Label" parent="."]
-visible = false
-offset_left = -5.0
-offset_top = -12.0
-offset_right = 12.0
-offset_bottom = 14.0
-text = "X"
-
 [node name="Coal Sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1, 0)
 stream = ExtResource("5_fjjrx")
 volume_db = 10.0
 autoplay = true

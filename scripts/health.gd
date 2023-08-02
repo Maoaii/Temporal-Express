@@ -28,7 +28,7 @@ func take_damage(amount: int) -> void:
 
 
 func get_health() -> int:
-	return health_bar.value
+	return int(health_bar.value)
 
 
 func heal(amount: int) -> void:

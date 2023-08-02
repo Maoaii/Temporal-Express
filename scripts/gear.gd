@@ -15,6 +15,7 @@ func _process(_delta: float) -> void:
 	var current_health: int = health.get_health()
 	if current_health <= 0:
 		sprite.stop()
+		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
 	elif current_health <= health.max_health / 4:
 		sprite.play("Spinning25")
 	elif current_health <= health.max_health / 2:

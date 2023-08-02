@@ -107,8 +107,7 @@ max_health = 100
 show_percentage = true
 
 [node name="DeteriorationComponent" parent="." instance=ExtResource("5_ck8et")]
-wait_time = 5.0
-time_to_tick = 1.0
+time_to_tick = 2.0
 
 [node name="InteractableArea" type="Area2D" parent="."]
 
@@ -123,5 +122,4 @@ bus = &"SFX"
 
 [connection signal="timeout" from="DeteriorationComponent" to="." method="_on_deterioration_component_timeout"]
 [connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
-[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]
 [connection signal="finished" from="Gear Sound" to="." method="_on_gear_sound_finished"]

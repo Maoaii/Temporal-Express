@@ -6,22 +6,17 @@ extends StaticBody2D
 @onready var overheat_timer: Timer = $OverheatTimer
 @onready var kaboom_timer: Timer = $KaboomTimer
 
-@export var max_heat: int = 10
+@export var max_heat: int = 20
+@export var pressure_relief: int = 5
 
 var overheat: int = 0
 var working: bool = true
 
 func _process(_delta: float) -> void:
-	"""
-	if working:
-		$X.visible = false
-	else:
-		$X.visible = true
-	"""
-	
 	coal_label.text = "Coal: " + str(get_tree().get_first_node_in_group("GameManager").coal_amount)
 	overheat_label.text = "Overheat: " + str(overheat)
 	
+	"""
 	var coal_amount = get_tree().get_first_node_in_group("GameManager").coal_amount
 	match coal_amount:
 		3:
@@ -30,19 +25,20 @@ func _process(_delta: float) -> void:
 			overheat_timer.wait_time = 3
 		5:
 			overheat_timer.wait_time = 2
+	"""
 	
 	if overheat >= max_heat:
 		if kaboom_timer.is_stopped():
 			kaboom_timer.start()
 		else:
 			$Sprite2D.modulate = Color(abs(kaboom_timer.wait_time - kaboom_timer.time_left + 1), 0, 0)
-	else:
+	elif working:
 		kaboom_timer.stop()
 		$Sprite2D.modulate = Color.WHITE
 
 
-func relief_pressure(amount: int = 2):
-	overheat = max(overheat - amount, 0)
+func relief_pressure():
+	overheat = max(overheat - pressure_relief, 0)
 	$"Presure Relief Sound".play()
 
 func coal_sound() -> void:
@@ -53,11 +49,11 @@ func _on_overheat_timer_timeout():
 	var coal_amount = get_tree().get_first_node_in_group("GameManager").coal_amount
 	match coal_amount:
 		3:
-			overheat = max(overheat + 1, 10)
+			overheat = min(overheat + 2, max_heat + 5)
 		4:
-			overheat = max(overheat + 2, 10)
+			overheat = min(overheat + 3, max_heat + 5)
 		5:
-			overheat = max(overheat + 3, 10)
+			overheat = min(overheat + 4, max_heat + 5)
 		_: overheat = max(overheat - 1, 0)
 
 

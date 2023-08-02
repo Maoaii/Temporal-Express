@@ -4,3 +4,4 @@
 
 [node name="DeteriorationComponent" type="Timer"]
 script = ExtResource("1_gcjnv")
+time_to_tick = 1.0

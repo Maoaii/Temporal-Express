@@ -12,3 +12,17 @@ res://scripts/coal_supply.gd
 res://scenes/player.tscn
 res://scripts/player.gd
 res://scripts/gear.gd
+res://scripts/lose_screen.gd
+res://scenes/gear.tscn
+res://scenes/settings_popup.tscn
+res://scripts/health.gd
+res://scripts/music_controller.gd
+res://scenes/deterioration_component.tscn
+res://scenes/pressure_valve.tscn
+res://scenes/game_manager.tscn
+res://scripts/game_manager.gd
+res://scenes/world.tscn
+res://scenes/win_screen.tscn
+res://scenes/pause_menu.tscn
+res://scenes/lose_screen.tscn
+res://autoloads/music_controller.tscn
