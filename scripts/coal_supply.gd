@@ -16,30 +16,21 @@ func _process(_delta: float) -> void:
 	coal_label.text = "Coal: " + str(get_tree().get_first_node_in_group("GameManager").coal_amount)
 	overheat_label.text = "Overheat: " + str(overheat)
 	
-	"""
-	var coal_amount = get_tree().get_first_node_in_group("GameManager").coal_amount
-	match coal_amount:
-		3:
-			overheat_timer.wait_time = 4
-		4:
-			overheat_timer.wait_time = 3
-		5:
-			overheat_timer.wait_time = 2
-	"""
-	
-	if overheat >= max_heat:
-		if kaboom_timer.is_stopped():
-			kaboom_timer.start()
-		else:
-			$Sprite2D.modulate = Color(abs(kaboom_timer.wait_time - kaboom_timer.time_left + 1), 0, 0)
-	elif working:
-		kaboom_timer.stop()
-		$Sprite2D.modulate = Color.WHITE
+	if get_tree().get_first_node_in_group("Train").pressure_valve_enabled:
+		if overheat >= max_heat:
+			if kaboom_timer.is_stopped():
+				kaboom_timer.start()
+			else:
+				$Sprite2D.modulate = Color(abs(kaboom_timer.wait_time - kaboom_timer.time_left + 1), 0, 0)
+		elif working:
+			kaboom_timer.stop()
+			$Sprite2D.modulate = Color.WHITE
 
 
 func relief_pressure():
-	overheat = max(overheat - pressure_relief, 0)
-	$"Presure Relief Sound".play()
+	if get_tree().get_first_node_in_group("Train").pressure_valve_enabled:
+		overheat = max(overheat - pressure_relief, 0)
+		$"Presure Relief Sound".play()
 
 func coal_sound() -> void:
 	$"Add Coal Sound".play()
@@ -90,3 +81,9 @@ func get_overheat():
 
 func get_overheat_time():
 	return kaboom_timer.time_left
+
+func enable_overheat():
+	overheat_label.visible = true
+
+func disable_overheat():
+	overheat_label.visible = false

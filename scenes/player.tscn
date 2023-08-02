@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhoms2wesdns0"]
+[gd_scene load_steps=6 format=3 uid="uid://dhoms2wesdns0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lc1hh"]
 [ext_resource type="PackedScene" uid="uid://cfsnvwc8i6pbm" path="res://assets/player/player.ase" id="2_owp6i"]
+[ext_resource type="StyleBox" uid="uid://c0ogbkijwgyfh" path="res://assets/ui/progress_bar.tres" id="3_40thw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwhfm"]
 size = Vector2(13, 16)
@@ -34,6 +35,7 @@ offset_left = -15.0
 offset_top = 10.0
 offset_right = 15.0
 offset_bottom = 17.0
+theme_override_styles/background = ExtResource("3_40thw")
 max_value = 4.0
 show_percentage = false
 

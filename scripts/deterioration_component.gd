@@ -9,4 +9,5 @@ func _ready():
 	start()
 
 func _process(_delta: float) -> void:
+	await ready
 	wait_time = time_to_tick
