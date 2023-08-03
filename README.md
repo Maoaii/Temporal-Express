@@ -16,11 +16,10 @@
 <h3 align="center">Temporal Express</h3>
 
   <p align="center">
-    project_description
     <br />
     <br />
     <br />
-    <a href="https://github.com/Maoaii/Temporal-Express">View Demo</a>
+    <a href="https://maoaii.itch.io/temporal-express">Play the game</a>
     ·
     <a href="https://github.com/Maoaii/Temporal-Express/issues">Report Bug</a>
   </p>
@@ -49,7 +48,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Temporal Express is my submission to Jame Gam's 30th edition.
 
+It's about a train conductor that needs to take his train to its' destination. However, this train is powered by a central gear that'll loose durability as time passes. Help the train conductor reach the final destination before both time kills you or the gear disintegrates!
+
+Coding and all the art, except the furnitures, were done by me.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,9 +68,7 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Access the link on the top of this readme to play the game!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
