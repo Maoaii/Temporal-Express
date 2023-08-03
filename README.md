@@ -10,13 +10,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/Maoaii/Temporal-Express">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/nvn4vm.png" alt="Logo" width="360" height="360">
   </a>
 
-<h3 align="center">Temporal Express</h3>
-
   <p align="center">
-    <br />
     <br />
     <br />
     <a href="https://maoaii.itch.io/temporal-express">Play the game</a>
